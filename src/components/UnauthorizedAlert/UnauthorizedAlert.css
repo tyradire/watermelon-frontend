@@ -1,0 +1,12 @@
+.unauthorized-alert {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.unauthorized-alert__description {
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
+  margin: auto;
+}

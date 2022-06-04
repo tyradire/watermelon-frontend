@@ -1,0 +1,23 @@
+.auth {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.auth__card {
+  padding: 80px;
+}
+
+.auth__title {
+  margin: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .auth {
+    width: 316px;
+  }
+  .auth__card {
+    padding: 20px;
+  }
+}

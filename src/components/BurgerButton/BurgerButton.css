@@ -1,0 +1,70 @@
+.burger {
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger__cover {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  background-color: #212529;
+  z-index: 1;
+  transition: .6s ease-in-out;
+  overflow: hidden;
+}
+
+.burger__cover_opened {
+  transition: .6s ease-in-out;
+  top: 0;
+}
+
+.burger__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/cross.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.burger__close:hover {
+  cursor: pointer;
+}
+
+.burger__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  align-items: center;
+}
+
+.burger__email {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.burger__list-item {
+  text-decoration: none;
+  color: #6c757d;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.burger__list-item:hover {
+  color: #fff;
+}
+
+.burger__list-item:last-of-type {
+  margin-top: 80px;
+}

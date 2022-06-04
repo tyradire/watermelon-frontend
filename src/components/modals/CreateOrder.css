@@ -1,0 +1,9 @@
+.order__text {
+  margin: 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.order__text-point {
+  font-weight: 700;
+}

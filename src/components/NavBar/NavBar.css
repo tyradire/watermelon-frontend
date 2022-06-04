@@ -1,0 +1,56 @@
+.navbar__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__auth-button:hover {
+  cursor: pointer;
+}
+
+.navbar__login {
+  cursor: pointer;
+  color: #46dd00;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  border: 1px solid #46dd00;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.navbar__login:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.navbar__login-text {
+  margin: 0;
+}
+
+.navbar__login-button {
+  margin-left: 4px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../../assets/login.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.navbar__auth-button_logout {
+  margin-top: 15px;
+  margin-left: 40px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../assets/logout.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.navbar__auth-button_logout:hover {
+  width: 24px;
+  height: 24px;
+  background-image: url('../../assets/logout-active.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}

@@ -1,0 +1,12 @@
+.empty-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20% 0 10%;
+  height: auto;
+}
+
+.empty-wrapper__description {
+  font-size: 20px;
+  color:rgb(202, 202, 202);
+}

@@ -1,0 +1,11 @@
+.product__container {
+  display: flex;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .product__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
