@@ -14,4 +14,4 @@ export const BASKET_ROUTE = '/basket';
 export const PRODUCT_ROUTE = '/product';
 export const FAVOURITES_ROUTE = '/favourites';
 
-export const BASE_URL = 'https://watermelon-backend.herokuapp.com';
+export const BASE_URL = 'https://api.watermelon-shop.ru';
