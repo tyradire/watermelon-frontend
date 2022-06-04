@@ -4,7 +4,8 @@ export const createVendor = ({ name }) => {
   return fetch(`${BASE_URL}/addvendor`, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     },
     body: JSON.stringify({ name })
   })
@@ -17,7 +18,8 @@ export const getVendors = () => {
   return fetch(`${BASE_URL}/getvendors`, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     }
   })
   .then((response) => {

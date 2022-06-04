@@ -17,7 +17,8 @@ export const getProducts = () => {
   return fetch(`${BASE_URL}/getproducts`, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -29,7 +30,8 @@ export const getOneProduct = ( id ) => {
   return fetch(`${BASE_URL}/getone/` + id, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     }
   })
   .then((response) => {

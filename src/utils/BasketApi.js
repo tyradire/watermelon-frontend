@@ -6,6 +6,7 @@ export const addToBasket = (id) => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -19,6 +20,7 @@ export const deleteBasketProduct = (id) => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -32,6 +34,7 @@ export const deleteOnePiece = (id) => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -45,6 +48,7 @@ export const getBasketProducts = () => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {

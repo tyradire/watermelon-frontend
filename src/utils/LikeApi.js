@@ -6,6 +6,7 @@ export const addLike = (id) => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -19,6 +20,7 @@ export const getLikes = () => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
@@ -32,6 +34,7 @@ export const deleteLike = (id) => {
     headers: {
       'Content-Type': 'application/json',
       'authorization': localStorage.getItem('jwt'),
+      Accept: 'application/json'
     }
   })
   .then((response) => {
