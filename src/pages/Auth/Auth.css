@@ -13,11 +13,17 @@
   margin: auto;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .auth {
-    width: 316px;
+    width: 320px;
   }
   .auth__card {
     padding: 20px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .auth {
+    width: 316px;
+  }
+} 

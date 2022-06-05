@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { REGISTRATION_ROUTE } from '../utils/consts';
+import './Login.css';
 
 const Login = ({ onSubmitLogin, loginError }) => {
 
@@ -31,13 +32,13 @@ const Login = ({ onSubmitLogin, loginError }) => {
       <Col
         className='d-flex justify-content-between mt-3 pl-3 pr-3'
       >
-        <div>Нет аккаунта? <Link to={REGISTRATION_ROUTE}>Зарегистрируйся</Link></div>
-        <Button
-          variant={'outline-success'}
+        <div>Нет аккаунта? <Link className='login__link' to={REGISTRATION_ROUTE}>Зарегистрируйся</Link></div>
+        <div
           onClick={handleSubmit}
+          className='login__button'
         >
           Войти
-        </Button>
+        </div>
       </Col>
     </Form>
   );

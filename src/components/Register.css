@@ -15,6 +15,7 @@
 }
 
 .register-checkbox__tooltip {
+  display: block;
   border: 1px dashed #000000;
   border-radius: 50%;
   width: 28px;
@@ -32,4 +33,62 @@
 
 .register-checkbox__tooltip:hover + .register-checkbox__help {
   display: block;
+}
+
+.register__link {
+  color: #46dd00;
+  margin-left: 10px;
+}
+
+.register__link:hover {
+  color: #46dd00;
+}
+
+.register__button {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  width: 100px;
+  height: 40px;
+  background-color: #212529;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.register__button:hover {
+  color: #46dd00;
+}
+
+.register__interaction {
+  display: flex;
+  flex-direction: row;
+}
+
+.register__account-text {
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .register-checkbox__tooltip {
+    display: none;
+  }
+  .register-checkbox__help {
+    display: none;
+  }
+  .register__interaction {
+    flex-direction: column;
+  }
+  .register__link {
+    margin: 0;
+  }
+  .register-checkbox__admin {
+    font-size: 12px;
+  }
 }

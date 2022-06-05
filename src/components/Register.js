@@ -38,7 +38,7 @@ const Register = ({ onSubmitRegister, registerError }) => {
         <Form.Check 
           type="switch"
           id="custom-switch"
-          className='my-2'
+          className='my-2 register-checkbox__admin'
           label="Зарегистрироваться как администратор"
           onChange={() => setCheck(!check)}
         />
@@ -50,13 +50,16 @@ const Register = ({ onSubmitRegister, registerError }) => {
       <Col
         className='d-flex justify-content-between mt-1 pl-3 pr-3'
       >
-        <div>Есть аккаунт? <Link to={LOGIN_ROUTE}>Войти</Link></div>
-        <Button
-          variant={'outline-success'}
+         <div className='register__interaction'>
+          <p className='register__account-text'>Есть аккаунт?</p> 
+          <Link className='register__link' to={LOGIN_ROUTE}>Войти</Link>
+        </div>
+        <div
           onClick={handleSubmit}
+          className='register__button'
         >
           Регистрация
-        </Button>
+        </div>
       </Col>
     </Form>
   );
