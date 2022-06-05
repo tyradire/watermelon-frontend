@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import burgerButton from '../../assets/burger.svg';
-import { BASKET_ROUTE, FAVOURITES_ROUTE } from '../../utils/consts';
+import { BASKET_ROUTE, FAVOURITES_ROUTE, SHOP_ROUTE } from '../../utils/consts';
 import { Context } from '../../index';
 import like from '../../assets/like-active.svg';
 import './BurgerButton.css';
 
-const BurgerButton = () => {
+const BurgerButton = ({ signOut }) => {
 
   const [burgerOpen, setBurgerOpen] = useState(false);
 
@@ -23,7 +23,7 @@ const BurgerButton = () => {
         <div className='burger__list'>  
           <a className='burger__list-item' href={FAVOURITES_ROUTE}>Favourites <img src={like} alt="Лайк" width={16} height={16} /></a>
           <a className='burger__list-item' href={BASKET_ROUTE}>Корзина</a>
-          <a className='burger__list-item' href={BASKET_ROUTE}>Выйти</a>
+          <a className='burger__list-item' href={SHOP_ROUTE} onClick={() => signOut()}>Выйти</a>
         </div>
       </div>
       <img onClick={() => {openBurgerMenu()}} className='burger' alt='button' src={burgerButton}/>

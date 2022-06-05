@@ -37,13 +37,17 @@ const NavBar = observer(() => {
   }, []);
 
   const setWindowSize = () => {
-    if (window.innerWidth < 500) {
+    if (window.screen.width < 500) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
     return
   }
+
+  useEffect(() => {
+    setWindowSize();
+  },[])
 
   return (
     <Navbar className='navbar' bg="dark" variant="dark">
