@@ -1,13 +1,13 @@
 import { BASE_URL } from './consts';
 
-export const register = ( email, password ) => {
+export const register = ( email, password, role ) => {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json'
     },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password, role })
   })
   .then((response) => {
     return checkResponse(response);

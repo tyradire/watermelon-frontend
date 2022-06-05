@@ -19,8 +19,8 @@ const Auth = observer(() => {
   const [registerError, setRegisterError] = useState('');
   const [loginError, setLoginError] = useState('');
 
-  const handleRegisterSubmit = (email, password) => {
-    register(email, password)
+  const handleRegisterSubmit = (email, password, role) => {
+    register(email, password, role)
     .then(() => {
       handleLoginSubmit(email, password);
     })

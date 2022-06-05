@@ -8,8 +8,6 @@ const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card
   const {product} = useContext(Context)
   const {user} = useContext(Context);
 
-  console.log(product.basket)
-
   return (
     <div 
         className="button-counter" 

@@ -8,14 +8,15 @@ const Register = ({ onSubmitRegister, registerError }) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [check, setCheck] = useState(false);
 
   const handleSubmit = () => {
-    onSubmitRegister(email, password);
+    onSubmitRegister(email, password, handleRole());
   }
 
-  // window.addEventListener('mousemove', function(evt) {
-  //   console.log(evt.target)
-  // })
+  const handleRole = () => {
+    return check ? 'ADMIN' : 'USER'
+  }
 
   return (
     <Form className='d-flex flex-column'>
@@ -39,6 +40,7 @@ const Register = ({ onSubmitRegister, registerError }) => {
           id="custom-switch"
           className='my-2'
           label="Зарегистрироваться как администратор"
+          onChange={() => setCheck(!check)}
         />
       <div className='register-checkbox__tooltip'>?</div>
       <div className='mx-auto register-checkbox__help' >
