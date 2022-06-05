@@ -62,7 +62,7 @@ const NavBar = observer(() => {
                 <Nav.Link className={`text-decoration-none  d-inline ${isFavourites ? 'text-danger' : ''}`} href={FAVOURITES_ROUTE}>
                   Favourites <img src={like} alt="Лайк" width={16} height={16} />
                 </Nav.Link> :
-                <BurgerButton />
+                <BurgerButton signOut={signOut} />
               )
               : ''
           }
