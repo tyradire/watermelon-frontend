@@ -9,12 +9,12 @@ const UnauthorizedAlert = ({ show, location }) => {
   const navigate = useNavigate();
 
   return (
-    <Alert className='mt-5 w-75 mx-auto unauthorized-alert' show={show} variant="warning">
+    <Alert className='mt-5 mx-auto unauthorized-alert' show={show} variant="warning">
         <div className='d-flex '>
           <p className='unauthorized-alert__description'>
             Только зарегистрированные пользователи могут совершать покупки и добавлять товары в {location}
           </p>
-          <div>
+          <div className='unauthorized-alert__buttons'>
             <Button size="sm" className='m-1' onClick={() => navigate(LOGIN_ROUTE)} variant="success">
               Войти
             </Button>
