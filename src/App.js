@@ -27,6 +27,10 @@ const App = observer(() => {
     } else setLoading(false);
   }, []);
 
+  useEffect(() => {
+    document.title = "Watermelon Shop"
+  }, []);
+
   return (
     <BrowserRouter>
       { loading ? <Spinner /> : <Main /> }

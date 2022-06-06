@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 525px) {
   .unauthorized-alert {
-    top: 75vh;
+    top: 65vh;
     width: 300px;
     left: calc(50% - 150px);
   }
