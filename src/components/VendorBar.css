@@ -4,17 +4,50 @@
 
 .vendor-bar__item {
   width: 260px;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
-@media screen and (max-width: 500px) {
-  .vendor-bar__item {
+@media screen and (max-width: 1024px) {
+  .vendor-bar {
+    width: 200px;
     margin: 0 auto;
+  }
+
+  .vendor-bar__item {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vendor-bar {
     width: 310px;
+    margin: 0 auto;
+  }
+
+  .vendor-bar__item {
+    width: 310px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .vendor-bar {
+    width: 280px;
+    margin-bottom: 40px;
+  }
+
+  .vendor-bar__item {
+    width: 280px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 320px) {
   .vendor-bar__item {
-    width: 300px;
+    width: 260px;
   }
 }

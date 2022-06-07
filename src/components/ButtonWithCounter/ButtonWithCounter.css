@@ -62,9 +62,9 @@
   color: #198754;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 525px) {
   .button-counter {
-    width: 310px;
+    width: 280px;
     margin: 0 auto 20px;
   }
   .button-counter__add-btn {
@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 320px) {
   .button-counter {
-    width: 300px;
+    width: 260px;
     margin: 0 auto 10px;
   }
 }

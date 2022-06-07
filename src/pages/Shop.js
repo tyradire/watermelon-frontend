@@ -6,6 +6,7 @@ import VendorBar from '../components/VendorBar';
 import { getProducts } from '../utils/ProductApi';
 import {Context} from "../index";
 import UnauthorizedAlert from '../components/UnauthorizedAlert/UnauthorizedAlert';
+import './Shop.css';
 
 const Shop = observer(() => {
 
@@ -27,17 +28,17 @@ const Shop = observer(() => {
   }, [])
 
   return (
-    <Container>
-      <Row className='mt-3'>
-        <Col md={3} className='mt-2'>
+    <div>
+      <div className='shop'>
+        <div >
           <VendorBar />
-        </Col>
-        <Col md={9}>
+        </div>
+        <div >
           <ProductList alert={alert} />
-        </Col>
-      </Row>
+        </div>
+      </div>
       <UnauthorizedAlert show={show} setShow={setShow} location={'избранное'} />
-    </Container>
+    </div>
   );
 });
 

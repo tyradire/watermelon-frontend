@@ -52,7 +52,7 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
   return (
     <Col>
-      <Card className='mt-4 product-item__card' border={'light'} bg={'light'} >
+      <Card className='product-item__card' border={'light'} bg={'light'} >
         <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
         <div className='text-black-50 mt-1 mx-1 product-item__info-wrapper'>
           <div className='product-item__product-name'>{card.name}</div>

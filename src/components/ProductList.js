@@ -1,21 +1,21 @@
 import { observer } from 'mobx-react-lite';
 import React, { useContext } from 'react';
-import { Row } from 'react-bootstrap';
 import { Context } from '../index';
 import ProductItem from './ProductItem/ProductItem';
+import './ProductList.css';
 
 const ProductList = observer(({ show, alert }) => {
 
   const { product } = useContext(Context)
 
   return (
-    <Row className='d-flex'>
+    <div className='product-list'>
       {product.products.map(item => 
          item.vendorId === ( Number(product.selectedVendor.id) || item.vendorId ) ?
           <ProductItem show={show} alert={alert} key={item.id} card={item} vendor={product.vendors[item.vendorId]} vendorId={item.vendorId} productId={item.id} />
         : ''
       )}
-    </Row>
+    </div>
   );
 });
 
