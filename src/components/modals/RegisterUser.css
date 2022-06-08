@@ -1,0 +1,47 @@
+.register-user__container {
+  position: absolute;
+  display: block;
+  top: 60vh;
+  left: calc(50% - 200px);
+  width: 400px;
+  background-color: #212529;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+.register-user__container_hide {
+  display: none;
+}
+
+.register-user__header {
+  padding: 20px 10px 20px 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-user__title {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #20c997;
+}
+
+.register-user__title_err {
+  color: #dc3545;
+}
+
+.register-user__close-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.register-user__close-btn:hover {
+  opacity: .7;
+} 

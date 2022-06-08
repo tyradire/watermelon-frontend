@@ -42,6 +42,7 @@ const Auth = observer(() => {
     .catch((err) => {
       console.log(err);
       setLoginError(ERRORS[err]);
+      user.setIsRegErr(true);
     })
   }
 
