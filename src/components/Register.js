@@ -1,13 +1,11 @@
 import React, {useContext, useState} from 'react';
-import { Button, Col, Form } from 'react-bootstrap';
-import { observer } from 'mobx-react-lite';
 import { Col, Form } from 'react-bootstrap';
+import { observer } from 'mobx-react-lite';
 import { Link } from 'react-router-dom';
 import { LOGIN_ROUTE } from '../utils/consts';
 import {Context} from "../index";
 import './Register.css';
 import RegisterUserError from './modals/RegisterUserError';
-import { observer } from 'mobx-react-lite';
 
 const Register = observer(({ onSubmitRegister, registerError }) => {
 

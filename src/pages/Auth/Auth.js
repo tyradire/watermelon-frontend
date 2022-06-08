@@ -26,7 +26,7 @@ const Auth = observer(() => {
     })
     .catch((err) => {
       console.log(err);
-      setRegisterError(ERRORS[err]);
+      user.setIsRegErr(true);
     })
   }
 
