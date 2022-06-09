@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Card, Col, Image } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import likeBtn from '../../assets/like.svg';
 import likeBtnActive from '../../assets/like-active.svg';
@@ -52,7 +52,7 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
   return (
     <Col>
-      <Card className='product-item__card' border={'light'} bg={'light'} >
+      <div className='product-item__card'>
         <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
         <div className='text-black-50 mt-1 mx-1 product-item__info-wrapper'>
           <div className='product-item__product-name'>{card.name}</div>
@@ -65,7 +65,7 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
           </div>
         </div>
         <div className='product-item__vendor-name'>{vendor}</div>
-      </Card>
+      </div>
       <ButtonWithCounter className='product-item__button-component' productId={productId} addProduct={addProduct} deleteProduct={deleteProduct} card={card} />
     </Col>
     

@@ -7,6 +7,7 @@
   border: 1px solid rgb(224, 224, 224);
   border-radius: 4px;
   box-shadow: 0px 0px 2px 0px rgba(63, 63, 63, 0.3);
+  background-color: #fff;
 }
 
 .basket-card__image {
@@ -126,6 +127,78 @@
   font-size: 16px;
   line-height: 16px;
   color: #198754;
+}
+
+@media screen and (max-width: 1024px) {
+  .basket-card {
+    max-width: 420px;
+    height: 142px;
+  }
+  .basket-card__image {
+    width: 140px;
+    height: 140px;
+  }
+  .basket-card__info {
+    margin-left: 10px;
+  }
+  .basket-card__product {
+    max-width: 200px;
+  }
+  .basket-card__title {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  .basket-card__description {
+    width: 200px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+  .basket-card__vendor {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .basket-card__price {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .basket-card__delete-btn {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .basket-card__quantity-wrapper {
+    padding: 4px;
+    width: 64px;
+    margin-right: 10px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basket-card {
+    width: 380px;
+    height: 132px;
+  }
+  .basket-card__image {
+    width: 130px;
+    height: 130px;
+  }
+  .basket-card__product {
+    max-width: 160px;
+  }
+  .basket-card__description {
+    width: 160px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .basket-card__quantity-wrapper {
+    padding: 4px;
+    width: 58px;
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {

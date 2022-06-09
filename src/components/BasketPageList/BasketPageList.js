@@ -18,7 +18,7 @@ const BasketPageList = observer(() => {
   }
 
   return (
-    <div>
+    <div className='basket-list'>
       {
         Object.keys(product.basket).map(item => {
         return <BasketPageCard 

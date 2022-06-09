@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
 import React, { useContext } from 'react';
-import { Row } from 'react-bootstrap';
 import { Context } from '../index';
 import ProductItem from './ProductItem/ProductItem';
+import './FavouriteList.css';
 
 const FavouriteList = observer(() => {
 
@@ -10,7 +10,7 @@ const FavouriteList = observer(() => {
   const { user } = useContext(Context)
 
   return (
-    <Row className='d-flex'>
+    <div className='product-list'>
       {
   product.products.map((item) => {
     if ((item.vendorId === ( Number(product.selectedVendor.id) || item.vendorId )) && user.likes.includes(item.id)) {
@@ -18,9 +18,8 @@ const FavouriteList = observer(() => {
     }
   })
 }
-    </Row>
+    </div>
   );
 });
 
 export default FavouriteList;
-

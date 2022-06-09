@@ -4,6 +4,7 @@
   cursor: pointer;
   box-sizing: border-box;
   text-align: center;
+  background-color: #fff;
 }
 
 .button-counter__quantity-wrapper {
@@ -15,6 +16,7 @@
   margin: 0;
   padding: 0;
   border: 1px solid #198754;
+  background-color: #fff;
   border-radius: 3px;
 }
 
@@ -54,12 +56,18 @@
 .button-counter__add-btn {
   width: 100%;
   height: 30px;
-  border: 1px solid #198754;
+  background-color: #198754;
   border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .5s;
 }
 
 .button-counter__add-btn:hover {
+  background-color: #fff;
   color: #198754;
+  border: 1px solid #198754;
 }
 
 @media screen and (max-width: 525px) {

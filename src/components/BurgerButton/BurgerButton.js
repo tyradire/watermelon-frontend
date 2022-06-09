@@ -23,6 +23,7 @@ const BurgerButton = ({ signOut }) => {
         <div className='burger__list'>  
           <a className='burger__list-item' href={FAVOURITES_ROUTE}>Favourites <img src={like} alt="Лайк" width={16} height={16} /></a>
           <a className='burger__list-item' href={BASKET_ROUTE}>Корзина</a>
+          <a className='burger__list-item' href={SHOP_ROUTE}>Магазин</a>
           <a className='burger__list-item' href={SHOP_ROUTE} onClick={() => signOut()}>Выйти</a>
         </div>
       </div>

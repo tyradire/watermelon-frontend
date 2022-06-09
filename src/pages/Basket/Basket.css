@@ -1,7 +1,7 @@
 .basket-page__container {
   display: flex;
-  justify-content: space-around;
-  max-width: 1280px;
+  justify-content: space-between;
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -12,6 +12,7 @@
   align-items: center;
   border-radius: 4px;
   margin: 20px 0;
+  background-color: #212529;
   box-shadow: 0px 0px 4px 0px rgba(63, 63, 63, 0.3);
 }
 
@@ -21,17 +22,22 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
+  color: #ced4da;
 }
 
 .basket-page__input {
   width: 80%;
-  height: 22px;
-  margin: 10px auto;
+  height: 30px;
+  margin: 2px auto 14px;
+  padding: 8px;
+  background-color: #4e5a66;
+  color: #fff;
 }
 
 .basket-page__input:focus {
-  outline: 1px solid #198754;
-  color: #198754;
+  outline: none;
+  color: #fff;
+  background-color: #778696;
 }
 
 .basket-page__input:last-of-type {
@@ -41,7 +47,7 @@
 .basket-page__input::placeholder {
   font-size: 13px;
   line-height: 14px;
-  color: #c2c2c2;
+  color: #96969671;
 }
 
 .basket-page__input-subtitle {
@@ -61,20 +67,49 @@
 .basket-page__input_date::-webkit-datetime-edit-day-field,
 .basket-page__input_date::-webkit-datetime-edit-year-field
 {
-  color: #5f5f5f;
+  color: #fff;
 }
 
 .basket-page__input_date::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1300px) {
+  .basket-page__container {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .basket-page__container {
+    max-width: 760px;
+    justify-content: center;
+  }
+  .basket-page__sidebar {
+    width: 240px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basket-page__container {
+    max-width: 460px;
+    flex-direction: column-reverse;
+    padding-top: 60px;
+  }
+  .basket-page__sidebar {
+    width: 380px;
+    margin: 20px auto;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .basket-page__container {
-    flex-direction: column-reverse;
     max-width: 320px;
     margin: 0 auto;
   } 
   .basket-page__sidebar {
+    width: 300px;
     margin: 20px auto;
   }
 }

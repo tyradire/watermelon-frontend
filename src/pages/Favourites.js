@@ -1,29 +1,29 @@
 import { observer } from 'mobx-react-lite';
 import React, { useContext } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import Empty from '../components/Empty/Empty';
 import FavouriteList from '../components/FavouriteList';
 import VendorBar from '../components/VendorBar';
 import { Context } from '../index';
+import './Favourites.css';
 
 const Favourites = observer(() => {
 
   const {user} = useContext(Context);
 
   return (
-    <Container>
-      <Row className='mt-3'>
-        <Col md={3} className='mt-2'>
+    <div>
+      <div className='favourites'>
+        <div>
           <VendorBar />
-        </Col>
-        <Col md={9}>
+        </div>
+        <div>
           { user.likes.length > 0
             ? <FavouriteList /> 
             : <Empty location={'избранном'} />
           }
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
 )});
 
 export default Favourites;

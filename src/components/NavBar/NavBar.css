@@ -1,11 +1,54 @@
-.navbar__container {
+.navbar {
   width: 100%;
+  background-color: #212529;
   display: flex;
   justify-content: space-between;
+  padding: 10px 140px;
+}
+
+.navbar__logo-link {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+.navbar__logo-link:hover {
+  color: #b3b3b3;
+  opacity: .5;
+}
+
+.navbar__favourites-button {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-left: 50px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar__favourites-button:hover {
+  color: #fff;
+  opacity: .5;
 }
 
 .navbar__auth-button:hover {
   cursor: pointer;
+}
+
+.navbar__user-side {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar__email {
+  color: #b3b3b3;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .navbar__login {
@@ -30,6 +73,24 @@
   margin: 0;
 }
 
+.navbar__admin-button {
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 10px;
+  padding-top: 8px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+}
+
+.navbar__admin-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #dc3545;
+}
+
 .navbar__login-button {
   margin-left: 4px;
   width: 22px;
@@ -40,8 +101,6 @@
 }
 
 .navbar__auth-button_logout {
-  margin-top: 15px;
-  margin-left: 40px;
   width: 24px;
   height: 24px;
   background-image: url('../../assets/logout.svg');
@@ -55,4 +114,71 @@
   background-image: url('../../assets/logout-active.svg');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar {
+    padding: 5px 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 5px 20px;
+  }
+  .navbar__logo-link {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+  }
+  .navbar__favourites-button {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
+  .navbar__logo-link {
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar__logo-link:before {
+    content: url('../../assets/watermelon.svg');
+    visibility: visible;
+  }
+  .navbar__logo-link:hover {
+    transform: rotate(-15deg);
+  }
+  .navbar__favourites-button {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+  .navbar__nav-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar__email {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .navbar__nav-side {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

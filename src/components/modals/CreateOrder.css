@@ -7,3 +7,34 @@
 .order__text-point {
   font-weight: 700;
 }
+
+.order__submit-button {
+  color: #fff;
+  border: 1px solid #198754;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: #198754;
+  opacity: 1;
+}
+
+.order__submit-button:hover {
+  background-color: #fff;
+  color: #198754;
+}
+
+.order__submit-button:disabled {
+  color: #fff;
+  border: 1px solid #198754;
+  border-radius: 4px;
+  cursor: default;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: #198754;
+  opacity: .5;
+}

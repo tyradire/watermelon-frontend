@@ -1,5 +1,11 @@
 .product-item__card {
   max-width: 190px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
+  -moz-box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
+  box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
 }
 
 .product-item__image {
@@ -22,7 +28,6 @@
 .product-item__vendor-name {
   text-align: center;
   font-size: 13px;
-  margin-bottom: 4px;
   color: #6c757d;
 }
 
