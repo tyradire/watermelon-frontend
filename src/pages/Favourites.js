@@ -16,10 +16,10 @@ const Favourites = observer(() => {
         <div>
           <VendorBar />
         </div>
-        <div>
+        <div className='favourites__wrapper'>
           { user.likes.length > 0
             ? <FavouriteList /> 
-            : <Empty location={'избранном'} />
+            : <Empty location={'избранном'}  />
           }
         </div>
       </div>

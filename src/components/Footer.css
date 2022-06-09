@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  margin: 100px auto 0;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.footer__link {
+  padding: 6px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.footer__link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}

@@ -16,18 +16,18 @@ const BurgerButton = ({ signOut }) => {
   }
 
   return (
-    <div>
+    <div className='burger'>
       <div className={burgerOpen ? 'burger__cover burger__cover_opened' : 'burger__cover'}>
         <div onClick={() => {openBurgerMenu()}} className='burger__close'></div>
         <p className='burger__email'>{user.email}</p>
         <div className='burger__list'>  
-          <a className='burger__list-item' href={FAVOURITES_ROUTE}>Favourites <img src={like} alt="Лайк" width={16} height={16} /></a>
+          <a className='burger__list-item' href={FAVOURITES_ROUTE}>Избранное <img src={like} alt="Лайк" width={16} height={16} /></a>
           <a className='burger__list-item' href={BASKET_ROUTE}>Корзина</a>
           <a className='burger__list-item' href={SHOP_ROUTE}>Магазин</a>
           <a className='burger__list-item' href={SHOP_ROUTE} onClick={() => signOut()}>Выйти</a>
         </div>
       </div>
-      <img onClick={() => {openBurgerMenu()}} className='burger' alt='button' src={burgerButton}/>
+      <img onClick={() => {openBurgerMenu()}} className='burger__button' alt='button' src={burgerButton}/>
     </div>
   );
 };

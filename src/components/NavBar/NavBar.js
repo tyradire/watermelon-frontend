@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Context } from '../../index';
 import { SHOP_ROUTE, LOGIN_ROUTE, ADMIN_ROUTE, BASKET_ROUTE, FAVOURITES_ROUTE } from '../../utils/consts';
 import BasketContainer from '../BasketContainer/BasketContainer';
@@ -51,16 +51,16 @@ const NavBar = observer(() => {
   },[])
 
   return (
-    <div className='navbar' bg="dark" variant="dark">
+    <div className='navbar'>
       <div className='navbar__nav-side'>
-        <a className="navbar__logo-link" href={SHOP_ROUTE}>
+        <Link className="navbar__logo-link" to={SHOP_ROUTE}>
           Watermelon Shop
-        </a>
+        </Link>
         {user.isAuth ? 
             (
               !isMobile ?
               <a className={`navbar__favourites-button  d-inline ${isFavourites ? 'text-danger' : ''}`} href={FAVOURITES_ROUTE}>
-                Favourites <img src={like} alt="Лайк" width={16} height={16} />
+                Избранное <img src={like} alt="Лайк" width={16} height={16} />
               </a> :
               <BurgerButton signOut={signOut} />
             )

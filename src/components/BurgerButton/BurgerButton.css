@@ -1,4 +1,10 @@
 .burger {
+  position: absolute;
+  top: -4px;
+  right: 10px;
+}
+
+.burger__button {
   cursor: pointer;
   z-index: 20;
 }

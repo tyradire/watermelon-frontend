@@ -167,18 +167,18 @@
   .navbar__nav-side {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   .navbar__email {
-    font-size: 12px;
-    line-height: 12px;
+    display: none;
   }
 }
 
 @media screen and (max-width: 499px) {
-  .navbar__nav-side {
-    width: 100%;
+  .navbar {
+    background-color: #212529;
     display: flex;
     justify-content: space-between;
+    padding: 0 10px;
   }
 }

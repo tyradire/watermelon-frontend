@@ -1,12 +1,15 @@
 .empty-wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20% 0 10%;
-  height: auto;
+  padding: 40px;
 }
 
 .empty-wrapper__description {
   font-size: 20px;
-  color:rgb(202, 202, 202);
+  line-height: 20px;
+  font-weight: 500;
+  color: #cacaca;
+  text-shadow: 1px 0px 40px #727272;
 }

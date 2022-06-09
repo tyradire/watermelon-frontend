@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import likeBtn from '../../assets/like.svg';
 import likeBtnActive from '../../assets/like-active.svg';
 import { PRODUCT_ROUTE } from '../../utils/consts';
-import { addToBasket, deleteOnePiece } from '../../utils/BasketApi';
+import { addToBasket, deleteOnePiece, deleteBasketProduct } from '../../utils/BasketApi';
 import {Context} from "../../index";
 import { observer } from 'mobx-react-lite';
 import './ProductItem.css';
@@ -48,12 +48,21 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
     product.deleteProductPiece(card.id);
   }
 
-  // src={like ? likeBtn : likeBtnActive}
+  const deleteProductFull = () => {
+    deleteBasketProduct(card.id)
+    .then(() => {
+      delete product.basket[card.id];
+    })
+    .catch(err => console.log(err));
+  }
 
   return (
     <Col>
       <div className='product-item__card'>
-        <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
+      <div className='product-item__image__wrapper'>
+          <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
+          <button className='product-item__delete-button' onClick={() => deleteProductFull()}>Х</button>
+        </div>
         <div className='text-black-50 mt-1 mx-1 product-item__info-wrapper'>
           <div className='product-item__product-name'>{card.name}</div>
           <div className='d-flex align-items-center'>
