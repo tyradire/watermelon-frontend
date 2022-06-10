@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { getOneProduct } from '../utils/ProductApi';
 import { addToBasket } from '../utils/BasketApi';
 import { useParams } from 'react-router-dom';
@@ -34,33 +34,30 @@ const ProductPage = observer(() => {
   }, []);
 
   return (
-    <Container className='product__container'>
-      <Col md={4}>
-        <Image width={300} height={300} src={pageItem.img ? process.env.REACT_APP_PUBLIC_URL + pageItem.img : plug}/>
-      </Col>
-      <Col md={4} className='mt-4'>
-        <Row className='d-flex flex-column align-items-center'>
-          <h2>{pageItem.name}</h2>
-        </Row>
+    <div className='product-page'>
+      <div className='product-page__container'>
         <div>
-          {pageItem.info}
+          <img alt='фото товара' className='product-page__image' src={pageItem.img ? process.env.REACT_APP_PUBLIC_URL + pageItem.img : plug}/>
         </div>
-        <div className='d-flex ms-2 mt-3 align-items-center'>
-          {pageItem.price} &#8381;
-          <Button variant={'outline-dark'} className='ms-5 mr-3' onClick={addProduct}>Купить</Button>
+        <div className='product-page__text-container'>
+          <h2 className='product-page__title'>{pageItem.name}</h2>
+          <p className='product-page__description'>{pageItem.info}</p>
+          <div className='d-flex ms-2 mt-3 align-items-center'>
+            {pageItem.price} &#8381;
+            <Button variant={'outline-dark'} className='ms-5 mr-3' onClick={addProduct}>Купить</Button>
+          </div>
         </div>
-        </Col>
-      <Col md={4}>
-        <Image
-          className='d-flex align-items-center justify-content-center mt-5'
+        <img
+          alt='лайк'
+          className='product-page__like'
           width={30}
           height={30}
           src={
             user.likes.includes(parseInt(id)) ? likeBtnActive : likeBtn
           }
         />
-      </Col>
-    </Container>
+      </div>
+    </div>
   );
 });
 
