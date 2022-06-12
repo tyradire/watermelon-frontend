@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { Col, Image } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import likeBtn from '../../assets/like.svg';
 import likeBtnActive from '../../assets/like-active.svg';
 import { PRODUCT_ROUTE } from '../../utils/consts';
-import { addToBasket, deleteOnePiece, deleteBasketProduct } from '../../utils/BasketApi';
+import { addToBasket, deleteOnePiece } from '../../utils/BasketApi';
 import {Context} from "../../index";
 import { observer } from 'mobx-react-lite';
 import './ProductItem.css';
@@ -42,42 +42,41 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
     .catch(err => console.log(err));
   };
 
-  const deleteProduct = () => {
-    console.log('удаление')
-    deleteOnePiece(card.id);
-    product.deleteProductPiece(card.id);
-  }
+  // const deleteProductFull = () => {
+  //   deleteBasketProduct(card.id)
+  //   .then(() => {
+  //     delete product.basket[card.id];
+  //   })
+  //   .catch(err => console.log(err));
+  // }
 
-  const deleteProductFull = () => {
-    deleteBasketProduct(card.id)
+  const deleteProduct = () => {
+    deleteOnePiece(card.id)
     .then(() => {
-      delete product.basket[card.id];
-    })
+      if (product.basket[card.id].quantity < 2) {
+        delete product.basket[card.id]
+      } else {
+        product.deleteProductPiece(card.id);
+      }})
     .catch(err => console.log(err));
   }
 
   return (
-    <Col>
-      <div className='product-item__card'>
-      <div className='product-item__image__wrapper'>
-          <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
-          <button className='product-item__delete-button' onClick={() => deleteProductFull()}>Х</button>
-        </div>
-        <div className='text-black-50 mt-1 mx-1 product-item__info-wrapper'>
-          <div className='product-item__product-name'>{card.name}</div>
-          <div className='d-flex align-items-center'>
-            <Image className='product-item__like-btn'
-              src={
-                user.likes.includes(productId) ? likeBtnActive : likeBtn
-              }
-              onClick={user.isAuth ? toggleLike : notAuth}/>
-          </div>
-        </div>
-        <div className='product-item__vendor-name'>{vendor}</div>
+    <div className='product-item__card'>
+      <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
+      {/* <button className='product-item__delete-button' onClick={() => deleteProductFull()}>Х</button> */}
+      <div className='product-item__info-wrapper'>
+        <Link className='product-item__product-name' to={(PRODUCT_ROUTE + '/' + card.id)}>{card.name}</Link>
+        <img className='product-item__like-btn'
+          alt='лайк'
+          src={
+            user.likes.includes(productId) ? likeBtnActive : likeBtn
+          }
+          onClick={user.isAuth ? toggleLike : notAuth}/>
       </div>
+      {/* <div className='product-item__vendor-name'>{vendor}</div> */}
       <ButtonWithCounter className='product-item__button-component' productId={productId} addProduct={addProduct} deleteProduct={deleteProduct} card={card} />
-    </Col>
-    
+    </div>
   );
 });
 

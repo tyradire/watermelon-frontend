@@ -1,9 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b7077d1.css",
-    "main.js": "/static/js/main.147cd7f8.js",
+    "main.css": "/static/css/main.99fea536.css",
+    "main.js": "/static/js/main.8b363ca0.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/watermelon-bg.jpg": "/static/media/watermelon-bg.a9716de2f794ed597217.jpg",
+    "static/media/inter-v11-latin_cyrillic-700.woff": "/static/media/inter-v11-latin_cyrillic-700.b29e9f07d570f0b28921.woff",
+    "static/media/inter-v11-latin_cyrillic-800.woff": "/static/media/inter-v11-latin_cyrillic-800.15e7d76edc19c1007ccd.woff",
+    "static/media/inter-v11-latin_cyrillic-600.woff": "/static/media/inter-v11-latin_cyrillic-600.c3a7be5554430477b184.woff",
+    "static/media/inter-v11-latin_cyrillic-500.woff": "/static/media/inter-v11-latin_cyrillic-500.35529817e371b4cdbf01.woff",
+    "static/media/inter-v11-latin_cyrillic-300.woff": "/static/media/inter-v11-latin_cyrillic-300.79e66a271625cd002632.woff",
+    "static/media/inter-v11-latin_cyrillic-regular.woff": "/static/media/inter-v11-latin_cyrillic-regular.e154f2936e843fb5568c.woff",
+    "static/media/inter-v11-latin_cyrillic-800.woff2": "/static/media/inter-v11-latin_cyrillic-800.5ef72c3ffdce1d14970d.woff2",
+    "static/media/inter-v11-latin_cyrillic-700.woff2": "/static/media/inter-v11-latin_cyrillic-700.b232970bda67c97fa661.woff2",
+    "static/media/inter-v11-latin_cyrillic-600.woff2": "/static/media/inter-v11-latin_cyrillic-600.f33bac78f2e33e524e73.woff2",
+    "static/media/inter-v11-latin_cyrillic-500.woff2": "/static/media/inter-v11-latin_cyrillic-500.1f6ed1cbe8940cb02696.woff2",
+    "static/media/inter-v11-latin_cyrillic-300.woff2": "/static/media/inter-v11-latin_cyrillic-300.5bded7cb2c2a301d77f4.woff2",
+    "static/media/inter-v11-latin_cyrillic-regular.woff2": "/static/media/inter-v11-latin_cyrillic-regular.3450f06ef9b75d403809.woff2",
     "static/media/zero.svg": "/static/media/zero.a6038ccc92c3f3589244696ba3295a63.svg",
     "static/media/watermelon.svg": "/static/media/watermelon.30af81a5f6d329465fd4.svg",
     "static/media/like.svg": "/static/media/like.9ae33b639d2c48102b786b6262c41d62.svg",
@@ -16,12 +28,12 @@
     "static/media/burger.svg": "/static/media/burger.7deeb88776466124daf1fb254aaf42ca.svg",
     "static/media/cross.svg": "/static/media/cross.a6eb752e0ab5aa5bb36b.svg",
     "static/media/login.svg": "/static/media/login.85ac7c6e8570faed46bb.svg",
-    "main.1b7077d1.css.map": "/static/css/main.1b7077d1.css.map",
-    "main.147cd7f8.js.map": "/static/js/main.147cd7f8.js.map",
+    "main.99fea536.css.map": "/static/css/main.99fea536.css.map",
+    "main.8b363ca0.js.map": "/static/js/main.8b363ca0.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b7077d1.css",
-    "static/js/main.147cd7f8.js"
+    "static/css/main.99fea536.css",
+    "static/js/main.8b363ca0.js"
   ]
 }

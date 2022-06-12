@@ -1,5 +1,8 @@
 .vendor-bar {
-  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #99ca74;
+  border-radius: 6px;
+  background-color: #fff;
 }
 
 .vendor-bar__item {
@@ -7,12 +10,31 @@
   font-size: 15px;
   line-height: 16px;
   font-weight: 400;
+  padding: 8px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.vendor-bar__red {
+  background-color: #99ca74;
+  font-weight: 600;
+  color: #fff;
+}
+
+.vendor-bar__item:hover {
+  background-color: #99ca74;
+  color: #fff;
+}
+
+@media screen and (max-width: 1600px) {
+  .vendor-bar__item {
+    width: 216px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .vendor-bar {
     width: 200px;
-    margin: 0 auto;
   }
 
   .vendor-bar__item {
@@ -23,7 +45,6 @@
 @media screen and (max-width: 768px) {
   .vendor-bar {
     width: 310px;
-    margin: 0 auto;
   }
 
   .vendor-bar__item {
@@ -36,10 +57,10 @@
 
 @media screen and (max-width: 525px) {
   .vendor-bar {
-    width: 280px;
-    margin-bottom: 40px;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: calc(50% - 140px);
   }
-
   .vendor-bar__item {
     width: 280px;
     margin: 0 auto;
@@ -47,6 +68,10 @@
 }
 
 @media screen and (max-width: 320px) {
+  .vendor-bar {
+    width: 260px;
+    margin-left: calc(50% - 130px);
+  }
   .vendor-bar__item {
     width: 260px;
   }

@@ -4,7 +4,6 @@ import { Context } from '../../index';
 import './Basket.css';
 import BasketPageList from '../../components/BasketPageList/BasketPageList';
 import { getBasketProducts } from '../../utils/BasketApi';
-import { Button, Modal } from 'react-bootstrap';
 import CreateOrder from '../../components/modals/CreateOrder';
 
 const Basket = observer(() => {
@@ -103,7 +102,7 @@ const Basket = observer(() => {
             type={'tel'}
             value={inputPhone}
             data-tel-input
-            placeholder='+1 (123) 456-78-90'
+            placeholder='+7 (123) 456-78-90'
             className='basket-page__input' 
             maxLength={18}
             onChange={(e) => editPhone(e)}
@@ -119,7 +118,9 @@ const Basket = observer(() => {
             disabled={!(inputPhone && inputDate && inputEmail)} 
             onClick={handleShow}
           >Купить</Button> */}
-          
+          { !(inputPhone && inputDate && inputEmail && priceCount !== 0) ?
+            <span className='basket-page__submit-note'>Для заказа заполните все поля</span>
+          : ''}
         </div>
       </div>
     </div>

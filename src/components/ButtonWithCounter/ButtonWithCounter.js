@@ -10,17 +10,12 @@ const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card
 
   return (
     <div 
-        className="button-counter" 
-        // variant={
-        //   Object.keys(product.basket).includes(productId + '') ?
-        //   "success" :
-        //   "outline-success"
-        // }         
+        className="button-counter"        
         disabled={!user.isAuth}
         >
           {Object.keys(product.basket).includes(productId + '') ? 
             <div className='button-counter__quantity-wrapper'>
-              <button alt='Минус' className='button-counter__count-btn' onClick={deleteProduct} disabled={(product.basket[productId] ? product.basket[productId].quantity : 1) < 2}>-</button>
+              <button alt='Минус' className='button-counter__count-btn' onClick={deleteProduct} disabled={(product.basket[productId] ? product.basket[productId].quantity : 1) < 1}>-</button>
               <p className='button-counter__quantity'>{product.basket[productId].quantity}</p>
               <button alt='Плюс' className='button-counter__count-btn' onClick={addProduct}>+</button>
             </div> :
