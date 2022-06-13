@@ -73,20 +73,21 @@
 .button-counter__add-btn:hover {
   background-color: #fff;
   color: #99ca74;
-  border: 1px solid #99ca74;
+  outline: 1px solid #99ca74;
 }
 
 @media screen and (max-width: 1300px) {
   .button-counter {
     width: 180px;
-    height: 26px;
+    height: 24px;
   }
 }
 
 @media screen and (max-width: 525px) {
   .button-counter {
     width: 280px;
-    margin: 0 auto 20px;
+    height: 26px;
+    margin: 0 auto 21px;
   }
   .button-counter__add-btn {
     height: 40px;

@@ -16,13 +16,12 @@ const VendorBar = observer(() => {
   })
 
   const selectVendorBar = (id, name) => {
-    console.log('func')
     product.setSelectedVendor({id: id, name: name});
   }
 
   return (
     <div className='vendor-bar' >
-      <div action className='vendor-bar__item' onClick={() => product.setSelectedVendor({id: '', name: ''})}>
+      <div className={`vendor-bar__item ${product.selectedVendor.id ? '' : 'vendor-bar__red'}`} onClick={() => product.setSelectedVendor({id: '', name: ''})}>
         Все продавцы
       </div>
       {Object.keys(product.vendors).map(vendor => 

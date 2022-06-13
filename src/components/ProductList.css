@@ -43,8 +43,8 @@
 @media screen and (max-width: 525px) {
   .product-list {
     margin: 0 auto;
-    max-width: 280px;
-    grid-template-columns: repeat(1, 280px);
+    max-width: 300px;
+    grid-template-columns: repeat(1, 300px);
     gap: 24px 0px;
   }
 }

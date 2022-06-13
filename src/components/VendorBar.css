@@ -5,6 +5,10 @@
   background-color: #fff;
 }
 
+.vendor-bar__all-vendors {
+  display: none;
+}
+
 .vendor-bar__item {
   width: 260px;
   font-size: 15px;
@@ -58,8 +62,7 @@
 @media screen and (max-width: 525px) {
   .vendor-bar {
     width: 300px;
-    margin-bottom: 20px;
-    margin-left: calc(50% - 140px);
+    margin: 0 auto 20px;
   }
   .vendor-bar__item {
     width: 280px;
@@ -70,7 +73,6 @@
 @media screen and (max-width: 320px) {
   .vendor-bar {
     width: 260px;
-    margin-left: calc(50% - 130px);
   }
   .vendor-bar__item {
     width: 260px;

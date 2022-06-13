@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Image } from 'react-bootstrap';
 import { getOneProduct } from '../utils/ProductApi';
 import { addToBasket } from '../utils/BasketApi';
 import { useParams } from 'react-router-dom';
@@ -9,6 +8,7 @@ import likeBtnActive from '../assets/like-active.svg';
 import { Context } from '../index';
 import { observer } from 'mobx-react-lite';
 import './ProductPage.css';
+import { addLike, deleteLike } from '../utils/LikeApi';
 
 const ProductPage = observer(() => {
 
@@ -16,6 +16,8 @@ const ProductPage = observer(() => {
   const {user} = useContext(Context)
   const [pageItem, setPageItem] = useState({info: []})
   const {id} = useParams();
+
+  let likeStatus = user.likes.includes(parseInt(id));
 
   const addProduct = () => {
     addToBasket(id)
@@ -33,6 +35,23 @@ const ProductPage = observer(() => {
     .catch(err => console.log(err))
   }, []);
 
+  const productPageLike = () => {
+    if (user.likes.includes(parseInt(id))) {
+      deleteLike(id)
+      .then(res => {
+        user.deleteLikeById(parseInt(id))
+        likeStatus = false;
+      })
+      .catch(err => console.log(err))
+    } else {
+    addLike(id)
+    .then(res => {
+      user.addLikeById(parseInt(id))
+      likeStatus = true;
+    })
+    .catch(err => console.log(err))}
+  }
+
   return (
     <div className='product-page'>
       <div className='product-page__container'>
@@ -42,9 +61,13 @@ const ProductPage = observer(() => {
         <div className='product-page__text-container'>
           <h2 className='product-page__title'>{pageItem.name}</h2>
           <p className='product-page__description'>{pageItem.info}</p>
-          <div className='d-flex ms-2 mt-3 align-items-center'>
-            {pageItem.price} &#8381;
-            <Button variant={'outline-dark'} className='ms-5 mr-3' onClick={addProduct}>Купить</Button>
+          <div className='product-page__buy-order'>
+            <p className='product-page__price'>{pageItem.price} &#8381;</p>
+            <button 
+            className='product-page__buy-button'
+            onClick={addProduct}
+            >Купить</button>
+            {/* <Button variant={'outline-dark'} className='ms-5 mr-3' onClick={addProduct}>Купить</Button> */}
           </div>
         </div>
         <img
@@ -55,6 +78,7 @@ const ProductPage = observer(() => {
           src={
             user.likes.includes(parseInt(id)) ? likeBtnActive : likeBtn
           }
+          onClick={productPageLike}
         />
       </div>
     </div>
