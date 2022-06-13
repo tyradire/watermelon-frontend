@@ -1,10 +1,11 @@
-.navbar {
+.navbar-container {
   width: 100%;
   height: 60px;
   background-color: #212529;
   display: flex;
   justify-content: space-between;
   padding: 10px 140px;
+  align-items: center;
 }
 
 .navbar__logo-link {
@@ -117,13 +118,13 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .navbar {
+  .navbar-container {
     padding: 5px 80px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .navbar {
+  .navbar-container {
     padding: 5px 20px;
   }
   .navbar__logo-link {
@@ -140,7 +141,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
+  .navbar-container {
     padding: 0 20px;
     position: fixed;
     top: 0;
@@ -175,7 +176,7 @@
 }
 
 @media screen and (max-width: 499px) {
-  .navbar {
+  .navbar-container {
     background-color: #212529;
     display: flex;
     justify-content: space-between;

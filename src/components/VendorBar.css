@@ -19,7 +19,7 @@
   margin: 2px;
 }
 
-.vendor-bar__red {
+.vendor-bar__selected {
   background-color: #99ca74;
   font-weight: 600;
   color: #fff;
@@ -42,7 +42,7 @@
   }
 
   .vendor-bar__item {
-    width: 200px;
+    width: 184px;
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   .vendor-bar__item {
-    width: 310px;
+    width: 294px;
     font-size: 14px;
     line-height: 15px;
     font-weight: 400;

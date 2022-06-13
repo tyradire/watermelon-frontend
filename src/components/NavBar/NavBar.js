@@ -51,7 +51,7 @@ const NavBar = observer(() => {
   },[])
 
   return (
-    <div className='navbar'>
+    <div className='navbar-container'>
       <div className='navbar__nav-side'>
         <Link className="navbar__logo-link" to={SHOP_ROUTE}>
           Watermelon Shop

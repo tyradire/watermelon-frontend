@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { getOneProduct } from '../utils/ProductApi';
-import { addToBasket } from '../utils/BasketApi';
+import { addToBasket, deleteOnePiece } from '../utils/BasketApi';
 import { useParams } from 'react-router-dom';
 import likeBtn from '../assets/like.svg';
 import plug from '../assets/image-plug.png';
@@ -9,6 +9,7 @@ import { Context } from '../index';
 import { observer } from 'mobx-react-lite';
 import './ProductPage.css';
 import { addLike, deleteLike } from '../utils/LikeApi';
+import ButtonWithCounter from '../components/ButtonWithCounter/ButtonWithCounter';
 
 const ProductPage = observer(() => {
 
@@ -17,17 +18,40 @@ const ProductPage = observer(() => {
   const [pageItem, setPageItem] = useState({info: []})
   const {id} = useParams();
 
-  let likeStatus = user.likes.includes(parseInt(id));
+  
+
+  // const addProduct = () => {
+  //   addToBasket(id)
+  //   .then((item) => {
+  //     let newProduct = {};
+  //     newProduct[item.product.productId] = { name: pageItem.name, price: pageItem.price, img: pageItem.img, key: item.product.id, quantity: 1, productId: item.product.productId };
+  //     product.addProductToBasket(newProduct);
+  //   })
+  //   .catch(err => console.log(err));
+  // }
 
   const addProduct = () => {
     addToBasket(id)
     .then((item) => {
       let newProduct = {};
-      newProduct[item.product.productId] = { name: pageItem.name, price: pageItem.price, img: pageItem.img, key: item.product.id, quantity: 1, productId: item.product.productId };
+      newProduct[item.product.productId] = { name: pageItem.name, vendorId: pageItem.vendorId, price: pageItem.price, img: pageItem.img, key: item.product.id, quantity: 1, productId: item.product.productId };
       product.addProductToBasket(newProduct);
     })
     .catch(err => console.log(err));
+  };
+
+  const deleteProduct = () => {
+    deleteOnePiece(id)
+    .then(() => {
+      if (product.basket[id].quantity < 2) {
+        delete product.basket[id]
+      } else {
+        product.deleteProductPiece(id);
+      }})
+    .catch(err => console.log(err));
   }
+
+
 
   useEffect(() => {
     getOneProduct(id)
@@ -40,14 +64,12 @@ const ProductPage = observer(() => {
       deleteLike(id)
       .then(res => {
         user.deleteLikeById(parseInt(id))
-        likeStatus = false;
       })
       .catch(err => console.log(err))
     } else {
     addLike(id)
     .then(res => {
       user.addLikeById(parseInt(id))
-      likeStatus = true;
     })
     .catch(err => console.log(err))}
   }
@@ -63,10 +85,11 @@ const ProductPage = observer(() => {
           <p className='product-page__description'>{pageItem.info}</p>
           <div className='product-page__buy-order'>
             <p className='product-page__price'>{pageItem.price} &#8381;</p>
-            <button 
+            <ButtonWithCounter productId={id} addProduct={addProduct} deleteProduct={deleteProduct} />
+            {/* <button 
             className='product-page__buy-button'
             onClick={addProduct}
-            >Купить</button>
+            >Купить</button> */}
             {/* <Button variant={'outline-dark'} className='ms-5 mr-3' onClick={addProduct}>Купить</Button> */}
           </div>
         </div>

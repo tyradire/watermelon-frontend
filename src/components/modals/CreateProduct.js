@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Col, Dropdown, Form, Modal, Row } from 'react-bootstrap';
+import { Button, Dropdown, Form, Modal } from 'react-bootstrap';
 import { Context } from '../../index';
 import { getVendors } from '../../utils/VendorApi';
 import { observer } from 'mobx-react-lite';
@@ -25,7 +25,7 @@ const CreateProduct = observer(({ show, onHide }) => {
     formData.append('price', `${price}`);
     formData.append('img', file);
     formData.append('vendorId', product.selectedVendor);
-    formData.append('info', info);
+    if (info.length > 0) {formData.append('info', info)};
     createProduct(formData).then(data => onHide())
     //createProduct({name, price, vendorId: product.selectedVendor.id}).then(data => onHide())
   }

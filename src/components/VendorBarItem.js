@@ -14,7 +14,7 @@ const VendorBarItem = observer(({ id, name, selectVendorBar }) => {
 
   return (
     <div
-      className={`vendor-bar__item ${product.selectedVendor.id === id ? 'vendor-bar__red' : ''}`}
+      className={`vendor-bar__item ${product.selectedVendor.id === id ? 'vendor-bar__selected' : ''}`}
       onClick={() => selectVendorBarItem(id, name)
       }>
     {name}
@@ -22,4 +22,4 @@ const VendorBarItem = observer(({ id, name, selectVendorBar }) => {
   );
 });
 
-export default VendorBarItem; 
+export default VendorBarItem;

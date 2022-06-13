@@ -37,8 +37,9 @@
   font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   overflow: hidden;
+  width: 190px;
 }
 
 .product-item__product-name:hover {
@@ -57,7 +58,7 @@
 .product-item__like-btn {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -4px;
   cursor: pointer;
   width: 16px;
   height: 16px;
@@ -86,14 +87,10 @@
     width: 170px;
   }
   .product-item__product-name {
-    width: 150px;
+    width: 170px;
     font-size: 15px;
     line-height: 15px;
     font-weight: 400;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
   }
 }
 
