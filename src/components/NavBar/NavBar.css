@@ -54,11 +54,11 @@
 
 .navbar__login {
   cursor: pointer;
-  color: #46dd00;
+  color: #9acd32;
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
-  border: 1px solid #46dd00;
+  border: 1px solid #9acd32;
   border-radius: 4px;
   padding: 4px;
   display: flex;
@@ -142,8 +142,7 @@
 
 @media screen and (max-width: 768px) {
   .navbar-container {
-    padding: 0 20px;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 3;
   }
@@ -151,13 +150,14 @@
     visibility: hidden;
     width: 40px;
     height: 40px;
+    transition: 1s;
   }
   .navbar__logo-link:before {
     content: url('../../assets/watermelon.svg');
     visibility: visible;
   }
   .navbar__logo-link:hover {
-    transform: rotate(-15deg);
+    transform: rotate(360deg);
   }
   .navbar__favourites-button {
     font-size: 15px;

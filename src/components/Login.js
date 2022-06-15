@@ -1,46 +1,45 @@
 import React, {useState} from 'react';
-import { Button, Col, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { REGISTRATION_ROUTE } from '../utils/consts';
-import './Login.css';
+import '../pages/Auth/Auth.css';
 
-const Login = ({ onSubmitLogin, loginError }) => {
+const Login = ({ onSubmitLogin }) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
     onSubmitLogin(email, password);
   }
 
   return (
-    <Form className='d-flex flex-column'>
-      <Form.Control 
-        className='mt-3'
+    <form className='auth__form'>
+      <input 
+        className='auth__input'
         placeholder='Введите ваш Email'
         type='email'
         value={email}
         onChange={e => setEmail(e.target.value)}
       />
-      <Form.Control 
-        className='mt-3'
+      <input 
+        className='auth__input'
         placeholder='Введите ваш пароль'
         type='password'
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
-      <Col
-        className='d-flex justify-content-between mt-3 pl-3 pr-3'
+      <div
+        className='auth__submit-container'
       >
-        <div>Нет аккаунта? <Link className='login__link' to={REGISTRATION_ROUTE}>Зарегистрируйся</Link></div>
-        <div
-          onClick={handleSubmit}
-          className='login__button'
+        <p className='auth__password-check'></p>
+        <button
+          onClick={e => handleSubmit(e)}
+          disabled={!(email && password)}
+          className='auth__button auth__button_login'
         >
           Войти
-        </div>
-      </Col>
-    </Form>
+        </button>
+      </div>
+    </form>
   );
 };
 

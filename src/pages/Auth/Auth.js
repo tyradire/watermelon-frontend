@@ -1,13 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { observer } from 'mobx-react-lite';
-import { Container, Card } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { LOGIN_ROUTE, SHOP_ROUTE, ERRORS } from '../../utils/consts';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { LOGIN_ROUTE, SHOP_ROUTE, REGISTRATION_ROUTE } from '../../utils/consts';
 import { register, authorize } from '../../utils/ApiAuth';  
 import { Context } from '../../index';
-import './Auth.css';
 import Register from '../../components/Register';
 import Login from '../../components/Login';
+import './Auth.css';
 
 const Auth = observer(() => {
 
@@ -16,16 +15,12 @@ const Auth = observer(() => {
   const navigate = useNavigate();
   const isLogin = location.pathname === LOGIN_ROUTE
 
-  const [registerError, setRegisterError] = useState('');
-  const [loginError, setLoginError] = useState('');
-
   const handleRegisterSubmit = (email, password, role) => {
     register(email, password, role)
     .then(() => {
       handleLoginSubmit(email, password);
     })
     .catch((err) => {
-      console.log(err);
       user.setIsRegErr(true);
     })
   }
@@ -41,24 +36,28 @@ const Auth = observer(() => {
     })
     .catch((err) => {
       console.log(err);
-      setLoginError(ERRORS[err]);
-      user.setIsRegErr(true);
     })
   }
 
   return (
-    <Container
+    <div
       className='auth'
     >
-      <Card className='card auth__card'>
+      <div className='auth__card'>
         <h2 className='auth__title'>
           {isLogin ? 'Авторизация' : 'Регистрация'}
         </h2>
         {
-          isLogin ? <Login onSubmitLogin={handleLoginSubmit} loginError={loginError} /> : <Register onSubmitRegister={handleRegisterSubmit} registerError={registerError} />
+          isLogin ? <Login onSubmitLogin={handleLoginSubmit} /> : <Register onSubmitRegister={handleRegisterSubmit} />
         }
-      </Card>
-    </Container>
+        <div className='auth__interaction'>
+          <p className='auth__account-text'>{isLogin ? `Нет аккаунта?` : `Есть аккаунт?`}</p> 
+          {
+          isLogin ? <Link className='auth__link' to={REGISTRATION_ROUTE}>Зарегистрироваться</Link> : <Link className='auth__link' to={LOGIN_ROUTE}>Войти</Link>
+        }
+        </div>
+      </div>      
+    </div>
   );
 });
 

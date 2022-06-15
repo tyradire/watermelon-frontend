@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { getOneProduct } from '../utils/ProductApi';
 import { addToBasket, deleteOnePiece } from '../utils/BasketApi';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import likeBtn from '../assets/like.svg';
 import plug from '../assets/image-plug.png';
 import likeBtnActive from '../assets/like-active.svg';
@@ -17,8 +17,6 @@ const ProductPage = observer(() => {
   const {user} = useContext(Context)
   const [pageItem, setPageItem] = useState({info: []})
   const {id} = useParams();
-
-  
 
   // const addProduct = () => {
   //   addToBasket(id)
@@ -51,8 +49,6 @@ const ProductPage = observer(() => {
     .catch(err => console.log(err));
   }
 
-
-
   useEffect(() => {
     getOneProduct(id)
     .then(product => setPageItem(product))
@@ -74,6 +70,10 @@ const ProductPage = observer(() => {
     .catch(err => console.log(err))}
   }
 
+  const selectVendor = () => {
+    product.setSelectedVendor({id: pageItem.vendorId + '', name: product.vendors[pageItem.vendorId]});
+  }
+
   return (
     <div className='product-page'>
       <div className='product-page__container'>
@@ -83,6 +83,7 @@ const ProductPage = observer(() => {
         <div className='product-page__text-container'>
           <h2 className='product-page__title'>{pageItem.name}</h2>
           <p className='product-page__description'>{pageItem.info}</p>
+          <Link to={'/'} replace className='product-page__vendor' onClick={selectVendor}>{product.vendors[pageItem.vendorId]}</Link>
           <div className='product-page__buy-order'>
             <p className='product-page__price'>{pageItem.price} &#8381;</p>
             <ButtonWithCounter productId={id} addProduct={addProduct} deleteProduct={deleteProduct} />
