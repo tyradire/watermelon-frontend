@@ -16,7 +16,6 @@ const VendorBar = observer(() => {
   })
 
   const selectVendorBar = (id, name) => {
-    console.log(typeof id, typeof name)
     product.setSelectedVendor({id: id, name: name});
   }
 

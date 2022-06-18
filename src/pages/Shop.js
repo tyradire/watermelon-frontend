@@ -12,8 +12,10 @@ const Shop = observer(() => {
 
   const [show, setShow] = useState(false);
 
-  const {product} = useContext(Context);
-  const {user} = useContext(Context);
+  const {product} = useContext(Context)
+  const {user} = useContext(Context)
+
+  const [productSearch, setProductSearch] = useState('');
 
   const alert = () => {
     setShow(true)
@@ -28,6 +30,23 @@ const Shop = observer(() => {
     .catch(err => console.log(err))
   }, [])
 
+  useEffect(() => {
+
+  }, [])
+
+  let newArray = [];
+
+  for (let i = 0; i < product.products.length; i++) {
+    newArray.push(product.products[i].name);
+  }
+
+  let newSearch = newArray.filter(elem => elem.includes(productSearch));
+
+  
+
+  // console.log('array+', newArray)
+  // console.log(newSearch)
+
   return (
     <div>
       <div className='shop'>
@@ -35,6 +54,12 @@ const Shop = observer(() => {
           <VendorBar />
         </div>
         <div >
+        {/* <input 
+          className="shop__search" 
+          type="search" 
+          placeholder="Поиск ..."
+          onChange={e => setProductSearch(e.target.value)}
+        /> */}
           <ProductList alert={alert} />
         </div>
       </div>
