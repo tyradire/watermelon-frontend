@@ -1,7 +1,7 @@
 .basket-card {
   max-width: 600px;
   height: 180px;
-  margin: 20px auto;
+  margin: 20px 60px ;
   display: flex;
   justify-content: space-between;
   border: 1px solid rgb(224, 224, 224);
@@ -133,6 +133,7 @@
   .basket-card {
     max-width: 420px;
     height: 142px;
+    margin: 20px;
   }
   .basket-card__image {
     width: 140px;
@@ -181,6 +182,7 @@
   .basket-card {
     width: 380px;
     height: 132px;
+    margin: 10px auto;
   }
   .basket-card__image {
     width: 130px;
@@ -207,6 +209,7 @@
     height: 100%;
     margin: 10px auto;
     flex-direction: column;
+    padding: 0;
   }
   .basket-card__image {
     width: 298px;

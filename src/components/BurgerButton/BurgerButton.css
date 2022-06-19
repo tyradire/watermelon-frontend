@@ -16,7 +16,7 @@
   position: fixed;
   top: -100vh;
   left: 0;
-  background-color: #212529;
+  background-color: #99ca74;
   z-index: 3;
   transition: .6s ease-in-out;
   overflow: hidden;
@@ -61,7 +61,7 @@
 
 .burger__list-item {
   text-decoration: none;
-  color: #6c757d;
+  color: #fff;
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
@@ -70,6 +70,7 @@
 
 .burger__list-item:hover {
   color: #fff;
+  opacity: .5;
 }
 
 .burger__list-item:last-of-type {

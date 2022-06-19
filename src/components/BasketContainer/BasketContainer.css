@@ -4,6 +4,23 @@
   margin-left: 20px;
 }
 
+.basket-container__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+}
+
+.basket-container__total-price {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
 .basket-container__empty {
   display: flex;
   justify-content: center;
@@ -12,15 +29,14 @@
   color:rgb(202, 202, 202);
 }
 
-.basket-container__btn {
+.basket-container__button {
   width: 30px;
   height: 30px;
   cursor: pointer;
   transition: .3s;
-  margin: 10px;
 }
 
-.basket-container__btn:hover {
+.basket-container__button:hover {
   opacity: .5;
 }
 
@@ -41,7 +57,7 @@
   display: block;
   position: absolute;
   top: -7px;
-  right: calc(50% - 2px);
+  right: calc(50% - 4px);
   width: 14px;
   height: 14px;
   transform: rotate(45deg);
@@ -88,4 +104,13 @@
 
 .footer__price {
   margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .basket-container__total-price {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 400;
+    margin: 0;
+  }
 }

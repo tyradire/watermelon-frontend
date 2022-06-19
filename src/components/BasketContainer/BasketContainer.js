@@ -36,12 +36,15 @@ const BasketContainer = observer(() => {
 
   return (
     <div className='basket-container'>
-      <img 
-        src={Object.keys(product.basket).length === 0 ? basketEmpty : basketWithProduct} 
-        alt='корзина' 
-        className='basket-container__btn'
-        onClick={() => navigate(BASKET_ROUTE)}
-      />
+      <div className='basket-container__button-wrapper'>
+        <p className='basket-container__total-price'>{total} &#8381;</p>
+        <img 
+          src={Object.keys(product.basket).length === 0 ? basketEmpty : basketWithProduct} 
+          alt='корзина' 
+          className='basket-container__button'
+          onClick={() => navigate(BASKET_ROUTE)}
+        />
+      </div>
       <div className='basket-container__content'>
         <span className='basket-container__arrow'></span>
         <div className='basket-container__products'>

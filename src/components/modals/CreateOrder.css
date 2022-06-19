@@ -10,7 +10,7 @@
 
 .order__submit-button {
   color: #fff;
-  border: 1px solid #198754;
+  border: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
   padding: 5px 30px;
@@ -18,23 +18,23 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  background-color: #198754;
   opacity: 1;
+  background-color: #9dc77e;
 }
 
 .order__submit-button:hover {
   background-color: #fff;
-  color: #198754;
+  color: #9dc77e;
 }
 
 .order__submit-button:disabled {
   color: #fff;
-  border: 1px solid #198754;
+  border: 1px solid #fff;
   border-radius: 4px;
   cursor: default;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  background-color: #198754;
-  opacity: .5;
+  background-color: #dfdfdf;
+  box-shadow: none;
 }

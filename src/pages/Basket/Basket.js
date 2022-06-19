@@ -4,7 +4,9 @@ import { Context } from '../../index';
 import './Basket.css';
 import BasketPageList from '../../components/BasketPageList/BasketPageList';
 import { getBasketProducts } from '../../utils/BasketApi';
+import { Button, Modal } from 'react-bootstrap';
 import CreateOrder from '../../components/modals/CreateOrder';
+import Empty from '../../components/Empty/Empty';
 
 const Basket = observer(() => {
   
@@ -75,7 +77,10 @@ const Basket = observer(() => {
 
   return (
     <div className='basket-page__container'>
-      <BasketPageList />
+      { Object.keys(product.basket).length === 0 ? 
+          <Empty location={'корзине'} /> :
+          <BasketPageList />
+      }
       <div>
         <div className='basket-page__sidebar'>
           <p className='basket-page__info'>Доставить на дом:</p>

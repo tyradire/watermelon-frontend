@@ -1,7 +1,8 @@
 .basket-page__container {
   display: flex;
-  justify-content: space-between;
-  max-width: 1000px;
+  justify-content: center;
+  background: rgba(255, 255, 255, .8);
+  width: 1000px;
   margin: 40px auto 0;
 }
 
@@ -12,8 +13,8 @@
   align-items: center;
   border-radius: 4px;
   margin: 20px 0;
-  background-color: #212529;
-  box-shadow: 0px 0px 4px 0px rgba(63, 63, 63, 0.3);
+  background-color: #9dc77e;
+  box-shadow: 0px 0px 10px 2px rgba(63, 63, 63, 0.3);
 }
 
 .basket-page__info {
@@ -22,7 +23,8 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
-  color: #ced4da;
+  color: #f8f9fa;
+  text-shadow: 0px 0px 10px #6e6e6e;
 }
 
 .basket-page__input {
@@ -30,14 +32,14 @@
   height: 30px;
   margin: 2px auto 14px;
   padding: 8px;
-  background-color: #4e5a66;
-  color: #fff;
+  background-color: #fff;
+  border: none;
+  color: #9acd32;
 }
 
 .basket-page__input:focus {
   outline: none;
-  color: #fff;
-  background-color: #778696;
+  color: #9acd32;
 }
 
 .basket-page__input:last-of-type {
@@ -47,7 +49,7 @@
 .basket-page__input::placeholder {
   font-size: 13px;
   line-height: 14px;
-  color: #96969671;
+  color: #99cd3256;
 }
 
 .basket-page__input-subtitle {
@@ -67,7 +69,7 @@
 .basket-page__input_date::-webkit-datetime-edit-day-field,
 .basket-page__input_date::-webkit-datetime-edit-year-field
 {
-  color: #fff;
+  color: #9acd32;
 }
 
 .basket-page__input_date::-webkit-calendar-picker-indicator {
@@ -78,7 +80,7 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
-  color: #ced4da;
+  color: #fff;
   padding-bottom: 5px;
 }
 
@@ -89,7 +91,6 @@
   }
   .basket-page__sidebar {
     width: 240px;
-    margin-left: 50px;
   }
   .basket-page__input {
     width: 192px;

@@ -4,6 +4,7 @@ export default class ProductStore {
   constructor() {
     this._vendors = {}
     this._products = []
+    this._filtredProducts = []
     this._basket = {}
     this._selectedVendor = {}
     makeAutoObservable(this)
@@ -15,6 +16,14 @@ export default class ProductStore {
 
   setProducts(products) {
     this._products = products;
+  }
+
+  setFiltredProducts(input) {
+    this._filtredProducts = input;
+  }
+
+  filterProducts(value) {
+    this.setFiltredProducts(this._products.filter(elem => elem.name.toLowerCase().includes(value.toLowerCase())));
   }
 
   setBasket(basket) {
@@ -60,6 +69,10 @@ export default class ProductStore {
 
   get products() {
     return this._products;
+  }
+
+  get filtredProducts() {
+    return this._filtredProducts;
   }
 
   get basket() {

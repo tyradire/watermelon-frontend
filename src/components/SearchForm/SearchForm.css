@@ -1,0 +1,125 @@
+.search-form {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 99px);
+  display: flex;
+  box-shadow: 0px 0px 10px 2px #c4c4c4;
+}
+
+.search-form__cancel {
+  font-size: 15px;
+  height: 34px;
+  width: 24px;
+  color: #ff6666;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form__input {
+  width: 140px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding-left: 8px;
+  transition: .5s;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #9acd32;
+  background-color: #fff;
+}
+
+.search-form__input::placeholder {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #9acd32;
+}
+
+.search-form__input:focus {
+  width: 240px;
+  outline: none;
+  color: #9acd32;
+  box-shadow: none;
+}
+
+.search-form__button {
+  width: 34px;
+  height: 34px;
+  padding: 10px;
+  background-image: url('../../assets/search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  .search-form {
+    left: calc(50% - 160px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .search-form {
+    position: static;
+    padding: 5px 0 5px 20px;
+  }
+  .search-form__input {
+    width: calc(100% - 80px);
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding-left: 8px;
+    transition: .5s;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #9acd32;
+    background-color: #fff;
+  }
+  .search-form__input:focus {
+    width: calc(100% - 80px);
+  }
+  .search-form__cancel {
+    border-radius: 6px 0 0 6px;
+  }
+  .search-form__button {
+    border-radius: 0 6px 6px 0;
+  }
+}
+
+/* @media screen and (max-width: 1024px) {
+  .search-form__input {
+    width: 80px;
+    height: 28px;
+    padding-left: 4px;
+  }
+  .search-form__cancel {
+    font-size: 12px;
+    height: 28px;
+    width: 18px;
+    color: #ff6666;
+    background-color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+  }
+  .search-form__button {
+    width: 18px;
+    height: 28px;
+    padding: 8px;
+    background-size: contain;
+  }
+  .search-form__input::placeholder {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .search-form__input:focus {
+    width: 80px;
+  }
+  .search-form__input:focus + .search-form__button {
+    display: none;
+
+  }
+} */

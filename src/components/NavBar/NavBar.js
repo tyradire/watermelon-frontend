@@ -7,6 +7,7 @@ import BasketContainer from '../BasketContainer/BasketContainer';
 import like from '../../assets/like-active.svg';
 import './NavBar.css';
 import BurgerButton from '../BurgerButton/BurgerButton';
+import SearchForm from '../SearchForm/SearchForm';
 
 const NavBar = observer(() => {
 
@@ -27,8 +28,6 @@ const NavBar = observer(() => {
     user.setLikes([]);
     product.clearBasket();
   }
-
-  
 
   useEffect(() => {
     window.addEventListener('resize', setWindowSize);
@@ -51,7 +50,8 @@ const NavBar = observer(() => {
   },[])
 
   return (
-    <div className='navbar-container'>
+    <div className='navbar-main' >
+      <div className='navbar-container'>
       <div className='navbar__nav-side'>
         <Link className="navbar__logo-link" to={SHOP_ROUTE}>
           Watermelon Shop
@@ -70,6 +70,7 @@ const NavBar = observer(() => {
       {user.isAuth ?
         (!isMobile ? 
         <div className='navbar__user-side'>
+          
           <p className='navbar__email'>{user.email}</p>
           {notBasket ? <BasketContainer /> : ''}
           {user.role === 'ADMIN' ? <div variant={'outline-light'} onClick={() => navigate(ADMIN_ROUTE)} className="navbar__admin-button" >Админ панель</div> : ''}
@@ -82,6 +83,8 @@ const NavBar = observer(() => {
           <div className="navbar__login-button"></div>
         </div>
       }
+      </div>
+      <SearchForm />
     </div>
   );
 })

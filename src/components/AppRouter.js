@@ -18,6 +18,8 @@ const AppRouter = observer(() => {
     .then(([ vendors, products ]) => {
       product.setVendors(vendors);
       product.setProducts(products);
+      product.setFiltredProducts(products);
+      console.log(products)
     })
   }, [])
 

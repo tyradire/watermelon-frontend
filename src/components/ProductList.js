@@ -10,7 +10,7 @@ const ProductList = observer(({ show, alert }) => {
 
   return (
     <div className='product-list'>
-      {product.products.map(item => 
+      {product.filtredProducts.map(item => 
          item.vendorId === ( Number(product.selectedVendor.id) || item.vendorId ) ?
           <ProductItem show={show} alert={alert} key={item.id} card={item} vendor={product.vendors[item.vendorId]} vendorId={item.vendorId} productId={item.id} />
         : ''
