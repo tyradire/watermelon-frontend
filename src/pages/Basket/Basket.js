@@ -114,7 +114,10 @@ const Basket = observer(() => {
           ></input>
         </div>
         <div className='basket-page__sidebar'>
-          <p className='basket-page__info'>Итого: {basketIsLoading ? 0 : productCount} {morph(productCount, ['товар', 'товара', 'товаров'])} на {priceCount} &#8381;</p>
+          <p className='basket-page__info'>
+            Итого: {basketIsLoading ? 0 : productCount} {morph(productCount, ['товар', 'товара', 'товаров'])} на 
+            <span className='basket-page__price-count'> {priceCount} &#8381;</span>
+          </p>
           <CreateOrder inputPhone={inputPhone} inputDate={inputDate} inputEmail={inputEmail} productCount={productCount} priceCount={priceCount} />
           {/* <Button 
             className='h-75 mx-auto mb-2 w-75' 

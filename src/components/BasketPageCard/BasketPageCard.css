@@ -24,10 +24,15 @@
 }
 
 .basket-card__title {
+  width: 200px;
   margin-top: 15px;
   font-size: 18px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .basket-card__description {
@@ -87,7 +92,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #198754;
+  border: 1px solid #9acd32;
   border-radius: 6px;
   padding: 5px;
   width: 80px;
@@ -126,7 +131,7 @@
 .basket-card__btn-symbol {
   font-size: 16px;
   line-height: 16px;
-  color: #198754;
+  color: #9acd32;
 }
 
 @media screen and (max-width: 1024px) {

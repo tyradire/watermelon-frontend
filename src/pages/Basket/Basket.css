@@ -84,6 +84,13 @@
   padding-bottom: 5px;
 }
 
+.basket-page__price-count {
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 1024px) {
   .basket-page__container {
     max-width: 760px;
