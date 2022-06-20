@@ -19,7 +19,6 @@ const CreateProduct = observer(({ show, onHide }) => {
   }
 
   const addProduct = () => {
-    console.log(name, price, file, product.selectedVendor.id, info)
     const formData = new FormData();
     formData.append('name', name);
     formData.append('price', `${price}`);
@@ -29,8 +28,6 @@ const CreateProduct = observer(({ show, onHide }) => {
     createProduct(formData).then(data => onHide())
     //createProduct({name, price, vendorId: product.selectedVendor.id}).then(data => onHide())
   }
-
-  console.log(product)
 
   useEffect(() => {
     getVendors().then(data => product.setVendors(data))

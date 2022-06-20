@@ -13,7 +13,7 @@ import ButtonWithCounter from '../ButtonWithCounter/ButtonWithCounter';
 
 const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
-  const {product} = useContext(Context)
+  const {product} = useContext(Context);
   const {user} = useContext(Context);
   const navigate = useNavigate();
 

@@ -19,7 +19,6 @@ const AppRouter = observer(() => {
       product.setVendors(vendors);
       product.setProducts(products);
       product.setFiltredProducts(products);
-      console.log(products)
     })
   }, [])
 

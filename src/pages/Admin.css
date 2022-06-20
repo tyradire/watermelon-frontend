@@ -1,0 +1,10 @@
+.admin-page {
+  width: 100%;
+}
+
+.admin-page__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}

@@ -46,6 +46,10 @@ export default class ProductStore {
     this._selectedVendor = vendor;
   }
 
+  deleteVendor(name) {
+    Object.keys(this._vendors).forEach(elem => { if (this._vendors[elem] === name) delete this._vendors[elem]})
+  }
+
   deleteProductPiece(id) {
     this._basket[id].quantity -= 1;
   }
