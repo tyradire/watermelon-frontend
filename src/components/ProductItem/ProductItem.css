@@ -39,7 +39,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
-  width: 190px;
+  width: 170px;
 }
 
 .product-item__product-name:hover {
@@ -87,7 +87,7 @@
     width: 170px;
   }
   .product-item__product-name {
-    width: 170px;
+    width: 150px;
     font-size: 15px;
     line-height: 15px;
     font-weight: 400;

@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -r ./build/* tyradire@51.250.84.14:/home/tyradire/watermelon-frontend"
+    "deploy": "scp -r ./build/* tyradire@51.250.90.116:/home/tyradire/watermelon-frontend"
   },
   "eslintConfig": {
     "extends": [
