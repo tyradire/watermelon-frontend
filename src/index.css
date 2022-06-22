@@ -1,3 +1,4 @@
 body {
-  background-color: #fff;
+  background-image: url('./assets/watermelon-bg.jpg');
+  background-repeat: repeat;
 }
