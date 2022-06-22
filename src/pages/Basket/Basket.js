@@ -81,7 +81,7 @@ const Basket = observer(() => {
           <Empty location={'корзине'} /> :
           <BasketPageList />
       }
-      <div>
+      <div className='basket-page__form'>
         <div className='basket-page__sidebar'>
           <p className='basket-page__info'>Доставить на дом:</p>
           <p className='basket-page__input-subtitle'>Выберите дату доставки</p>
@@ -131,6 +131,7 @@ const Basket = observer(() => {
           : ''}
         </div>
       </div>
+      <div className='basket-page__cover'></div>
     </div>
   );
 });

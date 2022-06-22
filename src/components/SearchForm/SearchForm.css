@@ -4,6 +4,13 @@
   left: calc(50% - 99px);
   display: flex;
   box-shadow: 0px 0px 10px 2px #c4c4c4;
+  opacity: .6;
+  filter: grayscale(100%);
+}
+
+.search-form_focus {
+  opacity: 1;
+  filter: none;
 }
 
 .search-form__cancel {
@@ -58,6 +65,7 @@
 @media screen and (max-width: 1300px) {
   .search-form {
     left: calc(50% - 160px);
+    box-shadow: none;
   }
 }
 

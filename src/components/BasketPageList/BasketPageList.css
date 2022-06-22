@@ -1,0 +1,16 @@
+.basket-list {
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .basket-list {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .basket-list {
+    margin-bottom: 20px;
+  }
+}

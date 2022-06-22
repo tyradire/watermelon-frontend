@@ -1,9 +1,23 @@
 .basket-page__container {
+  position: relative;
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, .8);
-  width: 1000px;
+  width: 1100px;
   margin: 40px auto 0;
+  height: auto;
+}
+
+.basket-page__form {
+  z-index: 2;
+}
+
+.basket-page__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+  filter: blur(20px);
 }
 
 .basket-page__sidebar {
@@ -15,6 +29,7 @@
   margin: 20px 0;
   background-color: #9dc77e;
   box-shadow: 0px 0px 10px 2px rgba(63, 63, 63, 0.3);
+  z-index: 2;
 }
 
 .basket-page__info {
@@ -91,6 +106,15 @@
   font-weight: 600;
 }
 
+@media screen and (max-width: 1300px) {
+  .basket-page__container {
+    max-width: 900px;
+  }
+  .basket-page__cover {
+    width: 1000px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .basket-page__container {
     max-width: 760px;
@@ -104,6 +128,9 @@
   }
   .basket-page__input-subtitle {
     width: 192px;
+  }
+  .basket-page__cover {
+    max-width: 700px;
   }
 }
 
@@ -123,6 +150,9 @@
   .basket-page__input-subtitle {
     width: 300px;
   }
+  .basket-page__cover {
+    max-width: 480px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -139,5 +169,8 @@
   }
   .basket-page__input-subtitle {
     width: 240px;
+  }
+  .basket-page__cover {
+    max-width: 320px;
   }
 }

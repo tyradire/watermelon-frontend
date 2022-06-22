@@ -15,7 +15,8 @@
 @media screen and (max-width: 525px) {
   .shop {
     display: block;
-    margin: 40px auto;
+    margin: 20px auto 10px;
+    padding-top: 20px;
   }
 }
 
