@@ -109,6 +109,7 @@
   background-image: url('../../assets/logout.svg');
   background-repeat: no-repeat;
   background-size: contain;
+  margin-left: 20px;
 }
 
 .navbar__auth-button_logout:hover {

@@ -21,6 +21,7 @@
   background-color: #f5f5f5;
   border: none;
   cursor: pointer;
+  border-radius: 6px 0 0 6px;
 }
 
 .search-form__input {
@@ -60,6 +61,7 @@
   background-position: center;
   border: none;
   background-color: #fff;
+  border-radius: 0 6px 6px 0;
 }
 
 @media screen and (max-width: 1300px) {
@@ -89,12 +91,6 @@
   }
   .search-form__input:focus {
     width: calc(100% - 80px);
-  }
-  .search-form__cancel {
-    border-radius: 6px 0 0 6px;
-  }
-  .search-form__button {
-    border-radius: 0 6px 6px 0;
   }
 }
 
