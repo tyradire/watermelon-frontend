@@ -1,8 +1,9 @@
+import { observer } from 'mobx-react-lite';
 import React, { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { createVendor } from '../../utils/VendorApi';
 
-const CreateVendor = ({ show, onHide }) => {
+const CreateVendor = observer(({ show, onHide }) => {
 
   const [value, setValue] = useState('');
 
@@ -41,6 +42,6 @@ const CreateVendor = ({ show, onHide }) => {
       </Modal.Footer>
     </Modal>
   );
-};
+});
 
 export default CreateVendor;

@@ -21,7 +21,7 @@ const Basket = observer(() => {
   const [inputEmail, setInputEmail] = useState(user.email);
   const [inputPhone, setInputPhone] = useState('');
   const [inputDate, setInputDate] = useState(todayDate);
- 
+
   const priceCount = Object.keys(product.basket).reduce((a, b) => a + product.basket[b].price * product.basket[b].quantity, 0)
   const productCount = Object.keys(product.basket).reduce((a, b) => a + product.basket[b].quantity, 0);
   
@@ -101,6 +101,8 @@ const Basket = observer(() => {
             type={'email'}
             onChange={(e) => setInputEmail(e.target.value)}
             placeholder='example@example.com'
+            pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+            required
           ></input>
           <p className='basket-page__input-subtitle'>Введите номер телефона</p>
           <input 

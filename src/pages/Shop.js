@@ -30,10 +30,6 @@ const Shop = observer(() => {
     .catch(err => console.log(err))
   }, [])
 
-  useEffect(() => {
-
-  }, [])
-
   let newArray = [];
 
   for (let i = 0; i < product.products.length; i++) {
@@ -54,12 +50,6 @@ const Shop = observer(() => {
           <VendorBar />
         </div>
         <div >
-        {/* <input 
-          className="shop__search" 
-          type="search" 
-          placeholder="Поиск ..."
-          onChange={e => setProductSearch(e.target.value)}
-        /> */}
           <ProductList alert={alert} />
         </div>
       </div>

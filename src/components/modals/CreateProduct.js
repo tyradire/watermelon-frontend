@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Dropdown, Form, Modal } from 'react-bootstrap';
 import { Context } from '../../index';
-import { getVendors } from '../../utils/VendorApi';
 import { observer } from 'mobx-react-lite';
-import { createProduct } from '../../utils/ProductApi';
+import { createProduct, getProducts } from '../../utils/ProductApi';
 
 const CreateProduct = observer(({ show, onHide }) => {
 
@@ -25,13 +24,13 @@ const CreateProduct = observer(({ show, onHide }) => {
     formData.append('img', file);
     formData.append('vendorId', product.selectedVendor);
     if (info.length > 0) {formData.append('info', info)};
-    createProduct(formData).then(data => onHide())
+    createProduct(formData).then((data) => {
+      product.addOneProduct(data)
+      onHide()
+    });
+    // getVendors().then(data => product.setVendors(data));
     //createProduct({name, price, vendorId: product.selectedVendor.id}).then(data => onHide())
   }
-
-  useEffect(() => {
-    getVendors().then(data => product.setVendors(data))
-  }, [])
 
   return (
     <Modal
@@ -49,7 +48,7 @@ const CreateProduct = observer(({ show, onHide }) => {
       <Modal.Body>
         <Form>
           <Dropdown className='mt-2 mb-2'>
-            <Dropdown.Toggle>{product.selectedVendor.name || 'Выберите производителя'}</Dropdown.Toggle>
+            <Dropdown.Toggle>{product.vendors[product.selectedVendor] || 'Выберите производителя'}</Dropdown.Toggle>
             <Dropdown.Menu>
               {Object.keys(product.vendors).map(vendor =>
                 <Dropdown.Item onClick={() => product.setSelectedVendor(vendor)} key={vendor}>{product.vendors[vendor]}</Dropdown.Item>  

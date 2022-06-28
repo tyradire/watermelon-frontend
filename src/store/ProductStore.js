@@ -10,6 +10,14 @@ export default class ProductStore {
     makeAutoObservable(this)
   }
 
+  addOneProduct(product) {
+    this._products.push(product);
+  }
+
+  deleteProductsByVendor(vendor) {
+    this._products = this._products.filter(elem => elem.vendorId !== vendor);
+  }
+
   setVendors(vendors) {
     vendors.forEach(vendor => {this._vendors[vendor.id] = vendor.name});
   }

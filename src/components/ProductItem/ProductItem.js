@@ -75,7 +75,7 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
           onClick={user.isAuth ? toggleLike : notAuth}/>
       </div>
       {/* <div className='product-item__vendor-name'>{vendor}</div> */}
-      <ButtonWithCounter className='product-item__button-component' productId={productId} addProduct={addProduct} deleteProduct={deleteProduct} card={card} />
+      <ButtonWithCounter className='product-item__button-component' productId={productId} addProduct={addProduct} deleteProduct={deleteProduct} card={card} alert={alert} notAuth={notAuth} />
     </div>
   );
 });

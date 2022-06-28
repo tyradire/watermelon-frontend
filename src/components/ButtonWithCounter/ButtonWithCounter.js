@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import { Context } from '../../index';
 import './ButtonWithCounter.css';
 
-const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card }) => {
+const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card, notAuth }) => {
 
-  const {product} = useContext(Context)
+  const {product} = useContext(Context);
   const {user} = useContext(Context);
 
   return (
@@ -21,7 +21,7 @@ const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card
             </div> :
            <div
             className='button-counter__add-btn'
-            onClick={addProduct} 
+            onClick={user.isAuth ? addProduct : notAuth}
            >
              Добавить в корзину
             </div>}

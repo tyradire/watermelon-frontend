@@ -1,9 +1,7 @@
 import { observer } from 'mobx-react-lite';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Context } from '../../index';
 import './SearchForm.css';
-
-
 
 const SearchForm = observer(() => {
 
@@ -11,6 +9,10 @@ const SearchForm = observer(() => {
 
   const [productSearch, setProductSearch] = useState('');
   const [focusInput, setFocusInput] = useState(false);
+
+  useEffect(() => {
+    product.setFiltredProducts(product.products);
+  }, [product.products])
 
   const submitSearch = (e) => {
     e.preventDefault();

@@ -14,6 +14,7 @@ const NavBar = observer(() => {
   const location = useLocation()
   const notBasket = location.pathname !== BASKET_ROUTE
   const isFavourites = location.pathname === FAVOURITES_ROUTE
+  const isShop = location.pathname === SHOP_ROUTE
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -83,8 +84,9 @@ const NavBar = observer(() => {
           <div className="navbar__login-button"></div>
         </div>
       }
-      </div>
-      <SearchForm />
+      </div>{
+        isShop ? <SearchForm /> : ''
+      }
     </div>
   );
 })

@@ -18,8 +18,9 @@ const Register = observer(({ onSubmitRegister }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    onSubmitRegister(email, password, handleRole());
-    user.setIsReg(true);
+    onSubmitRegister(email, password, handleRole())
+    .then(res => user.setIsReg(true))
+    .catch(err => console.log(err))
   }
 
   const handleRole = () => {
