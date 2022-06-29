@@ -69,6 +69,32 @@
   border-bottom: 1px solid #212529;
 }
 
+.auth__password-wrapper {
+  position: relative;
+}
+
+.auth__show-wrapper {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 24px);
+  height: 48px;
+  width: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  background-image: url('../../assets/show.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.auth__show-wrapper_unshow {
+  background-image: url('../../assets/unshow.svg');
+}
+
+.auth__show-button {
+  display: none;
+}
+
 .auth__input::placeholder {
   color: #ddd;
 }
