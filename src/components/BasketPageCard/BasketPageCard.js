@@ -1,7 +1,8 @@
 import { observer } from 'mobx-react-lite';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { deleteOnePiece, addToBasket } from '../../utils/BasketApi';
 import { Context } from '../../index';
+import defaultImage from '../../assets/default-image.jpg';
 import './BasketPageCard.css';
 
 const BasketPageCard = observer(({ card, vendor, deleteProduct }) => {
@@ -33,7 +34,7 @@ const BasketPageCard = observer(({ card, vendor, deleteProduct }) => {
   return (
     <div className='basket-card'>
       <img className='basket-card__image' 
-        src={process.env.REACT_APP_PUBLIC_URL + card['img']} 
+        src={card['img'] ? process.env.REACT_APP_PUBLIC_URL + card['img'] : defaultImage} 
         alt="товар" 
       />
       <div className='basket-card__info'>

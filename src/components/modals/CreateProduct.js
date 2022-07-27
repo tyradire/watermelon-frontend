@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Dropdown, Form, Modal } from 'react-bootstrap';
 import { Context } from '../../index';
 import { observer } from 'mobx-react-lite';
-import { createProduct, getProducts } from '../../utils/ProductApi';
+import { createProduct } from '../../utils/ProductApi';
+import './CreateProduct.css';
 
 const CreateProduct = observer(({ show, onHide }) => {
 
@@ -24,10 +25,12 @@ const CreateProduct = observer(({ show, onHide }) => {
     formData.append('img', file);
     formData.append('vendorId', product.selectedVendor);
     if (info.length > 0) {formData.append('info', info)};
-    createProduct(formData).then((data) => {
+    createProduct(formData)
+    .then((data) => {
       product.addOneProduct(data)
       onHide()
-    });
+    })
+    .catch(err => console.log(err));
     // getVendors().then(data => product.setVendors(data));
     //createProduct({name, price, vendorId: product.selectedVendor.id}).then(data => onHide())
   }
@@ -47,7 +50,7 @@ const CreateProduct = observer(({ show, onHide }) => {
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Dropdown className='mt-2 mb-2'>
+          <Dropdown className='mt-2'>
             <Dropdown.Toggle>{product.vendors[product.selectedVendor] || 'Выберите производителя'}</Dropdown.Toggle>
             <Dropdown.Menu>
               {Object.keys(product.vendors).map(vendor =>
@@ -58,13 +61,13 @@ const CreateProduct = observer(({ show, onHide }) => {
               className='mt-3'
               value={name}
               onChange={e => setName(e.target.value)}
-              placeholder='Введите название продукта'
+              placeholder='Введите название продукта *'
             />
             <Form.Control 
               className='mt-3'
               value={price || 'Введите стоимость продукта'}
               onChange={e => setPrice(Number(e.target.value))}
-              placeholder='Введите стоимость продукта'
+              placeholder='Введите стоимость продукта *'
               type='number'
             />
             <Form.Control 
@@ -78,9 +81,11 @@ const CreateProduct = observer(({ show, onHide }) => {
               type='file'
               onChange={selectFile}
             />
+            <div className='create-product__note'>* - Обязательные поля</div>
           </Dropdown>
         </Form>
       </Modal.Body>
+      
       <Modal.Footer>
         <Button variant='outline-danger' onClick={onHide}>Закрыть</Button>
         <Button variant='outline-success' onClick={addProduct}>Добавить</Button>

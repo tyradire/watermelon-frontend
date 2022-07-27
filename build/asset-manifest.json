@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba47891e.css",
+    "main.css": "/static/css/main.1af82532.css",
     "main.js": "/static/js/main.5e6816c9.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/watermelon-bg.jpg": "/static/media/watermelon-bg.a9716de2f794ed597217.jpg",
@@ -26,16 +26,18 @@
     "static/media/logout.svg": "/static/media/logout.a6dc74725f7ee78c018b.svg",
     "static/media/minus.svg": "/static/media/minus.0637f36dadc62ebe3dd8.svg",
     "index.html": "/index.html",
+    "static/media/unshow.svg": "/static/media/unshow.ca27f2d8d87105e9eb50.svg",
     "static/media/plus.svg": "/static/media/plus.37d8f5e7eac823a03e7a.svg",
     "static/media/burger.svg": "/static/media/burger.3ec4eefc4d827a3e178544f116546da3.svg",
+    "static/media/show.svg": "/static/media/show.662390da3ad0439d1588.svg",
     "static/media/cross.svg": "/static/media/cross.c547c0a685817a991a17.svg",
     "static/media/login.svg": "/static/media/login.85ac7c6e8570faed46bb.svg",
-    "main.ba47891e.css.map": "/static/css/main.ba47891e.css.map",
+    "main.1af82532.css.map": "/static/css/main.1af82532.css.map",
     "main.5e6816c9.js.map": "/static/js/main.5e6816c9.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba47891e.css",
+    "static/css/main.1af82532.css",
     "static/js/main.5e6816c9.js"
   ]
 }

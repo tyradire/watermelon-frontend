@@ -41,11 +41,12 @@ const SearchForm = observer(() => {
         onFocus={e=>setFocusInput(true)}
         onBlur={e=>setFocusInput(false)}
       />
-      <button
+      <input
         className='search-form__button'
         type='submit'
+        value=''
       >
-      </button>
+      </input>
     </form>
   );
 });

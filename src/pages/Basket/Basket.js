@@ -32,7 +32,6 @@ const Basket = observer(() => {
   function editPhone(e) {
     let formattingValue = formattingInputValue(e.target);
     if (!formattingValue || e.target.value == '+') {
-      console.log(11111111111)
       setInputPhone('');
       return e.target.value = '';
     };

@@ -12,7 +12,9 @@ const Register = observer(({ onSubmitRegister }) => {
   const [repeatPassword, setRepeatPassword] = useState('');
   const [check, setCheck] = useState(false)
 
-  const checkSubmit = (email && password && password === repeatPassword);
+  const registerEmailReg = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/g;
+
+  const checkSubmit = (email.match(registerEmailReg) && password && password === repeatPassword);
 
   const {user} = useContext(Context)
 
@@ -36,8 +38,9 @@ const Register = observer(({ onSubmitRegister }) => {
         type='email'
         value={email}
         autoComplete="new"
-        required
         onChange={e => setEmail(e.target.value)}
+        pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+        required
       />
       <input 
         className='auth__input'

@@ -1,8 +1,8 @@
 .vendor-bar {
   padding: 5px;
-  border: 1px solid #99ca74;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: rgba(153, 202, 116, 0.5);
+  border-bottom: 4px solid #589377;
 }
 
 .vendor-bar__all-vendors {
@@ -11,23 +11,27 @@
 
 .vendor-bar__item {
   width: 260px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 16px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 8px;
   cursor: pointer;
   margin: 2px;
+  border-radius: 4px;
+  background-color: rgb(15, 81, 50, .4);
+  color: #fff;
 }
 
 .vendor-bar__selected {
   background-color: #99ca74;
   font-weight: 600;
   color: #fff;
+  border-radius: 4px;
 }
 
 .vendor-bar__item:hover {
-  background-color: #99ca74;
-  color: #fff;
+  background-color: #fff;
+  color: #99ca74;
 }
 
 @media screen and (max-width: 1600px) {

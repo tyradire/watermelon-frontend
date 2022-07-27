@@ -18,6 +18,10 @@ export default class ProductStore {
     this._products = this._products.filter(elem => elem.vendorId !== vendor);
   }
 
+  addVendor(vendor) {
+    this._vendors[vendor.id] = vendor.name;
+  }
+
   setVendors(vendors) {
     vendors.forEach(vendor => {this._vendors[vendor.id] = vendor.name});
   }

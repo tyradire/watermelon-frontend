@@ -10,6 +10,8 @@ const Login = observer(({ onSubmitLogin }) => {
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false);
 
+  const loginEmailReg = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/g;
+
   const {user} = useContext(Context)
 
   const handleSubmit = (evt) => {
@@ -26,6 +28,8 @@ const Login = observer(({ onSubmitLogin }) => {
         type='email'
         value={email}
         onChange={e => setEmail(e.target.value)}
+        pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+        required
       />
       <div className='auth__password-wrapper'>
         <input 
@@ -49,7 +53,7 @@ const Login = observer(({ onSubmitLogin }) => {
         <p className='auth__password-check'></p>
         <button
           onClick={e => handleSubmit(e)}
-          disabled={!(email && password)}
+          disabled={!(email.match(loginEmailReg) && password)}
           className='auth__button auth__button_login'
         >
           Войти

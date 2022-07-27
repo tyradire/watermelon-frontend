@@ -4,6 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { addToBasket, deleteOnePiece } from '../../utils/BasketApi';
 import {Context} from "../../index";
 import { Link } from 'react-router-dom';
+import defaultImage from '../../assets/default-image.jpg';
 
 const BasketItem = observer(({ card, deleteProduct }) => {
 
@@ -31,7 +32,7 @@ const BasketItem = observer(({ card, deleteProduct }) => {
   return (
     <div className='product'>
       <button className='product__delete-btn' onClick={deleteItem}><span>x</span></button>
-      <img className='product__image' alt={'product'} src={process.env.REACT_APP_PUBLIC_URL + card['img']}/>
+      <img className='product__image' alt={'product'} src={card['img'] ? process.env.REACT_APP_PUBLIC_URL + card['img'] : defaultImage}/>
       <Link to={`product/${card.productId}`} className='product__title' target='_blank'>{ card['name'] }</Link>
       <div className='product__quantity-wrapper'>
         <button alt='minus-button' className='quantity-wrapper__btn quantity-wrapper__btn-minus' onClick={clickMinus} disabled={product.basket[card.productId].quantity < 2}></button>

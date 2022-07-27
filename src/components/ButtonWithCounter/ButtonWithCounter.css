@@ -6,6 +6,7 @@
   text-align: center;
   background-color: #fff;
   margin-bottom: 12px;
+  border-radius: 4px;
 }
 
 .button-counter__quantity-wrapper {

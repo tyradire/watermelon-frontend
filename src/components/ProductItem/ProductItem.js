@@ -10,6 +10,7 @@ import { observer } from 'mobx-react-lite';
 import './ProductItem.css';
 import { addLike, deleteLike } from '../../utils/LikeApi';
 import ButtonWithCounter from '../ButtonWithCounter/ButtonWithCounter';
+import defaultImage from '../../assets/default-image.jpg';
 
 const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
@@ -63,7 +64,7 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
   return (
     <div className='product-item__card'>
-      <Image className='product-item__image' src={process.env.REACT_APP_PUBLIC_URL + card.img} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
+      <Image className='product-item__image' src={card.img ? process.env.REACT_APP_PUBLIC_URL + card.img : defaultImage} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
       {/* <button className='product-item__delete-button' onClick={() => deleteProductFull()}>Х</button> */}
       <div className='product-item__info-wrapper'>
         <Link className='product-item__product-name' to={(PRODUCT_ROUTE + '/' + card.id)}>{card.name}</Link>

@@ -1,17 +1,23 @@
 import { observer } from 'mobx-react-lite';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
+import { Context } from '../../index';
 import { createVendor } from '../../utils/VendorApi';
 
 const CreateVendor = observer(({ show, onHide }) => {
 
+  const {product} = useContext(Context);
+
   const [value, setValue] = useState('');
 
   const addVendor = () => {
-    createVendor({name: value}).then(data => {
+    createVendor({name: value})
+    .then(data => {
       setValue('');
       onHide();
+      product.addVendor(data);
     })
+    .catch(err => console.log(err))
   }
 
   return (

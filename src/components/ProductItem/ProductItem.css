@@ -6,12 +6,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  -webkit-box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
-  -moz-box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
-  box-shadow: 0px 0px 12px 3px rgba(184, 184, 184, 0.5);
   border-radius: 6px;
-  border-bottom: none;
+  background-color: rgba(153, 202, 116, 0.3);
+  border-bottom: 3px solid #589377;
+}
+
+.product-item__card:hover {
+  -webkit-box-shadow: 0px 0px 14px #589377;
+  -moz-box-shadow: 0px 0px 14px #589377;
+  box-shadow: 0px 0px 14px #589377;
 }
 
 .product-item__image {
@@ -20,6 +23,7 @@
   border-radius: 6px;
   cursor: pointer;
   margin: 8px 0 4px;
+  border-radius: 50%;
 }
 
 .product-item__info-wrapper {
@@ -31,14 +35,15 @@
 .product-item__product-name {
   text-decoration: none;
   text-align: center;
-  color: #000;
+  color: #fff;
   font-size: 17px;
-  line-height: 17px;
-  font-weight: 400;
+  line-height: 24px;
+  font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+  text-shadow: 1px 1px 2px #000;
   width: 170px;
 }
 
@@ -57,7 +62,7 @@
 
 .product-item__like-btn {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: -4px;
   cursor: pointer;
   width: 16px;
