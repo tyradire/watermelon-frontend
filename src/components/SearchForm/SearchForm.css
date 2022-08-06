@@ -83,7 +83,8 @@
 @media screen and (max-width: 1024px) {
   .search-form {
     position: static;
-    padding: 5px 0 5px 20px;
+    padding: 15px 0 0 20px;
+    border-bottom: none;
   }
   .search-form__input {
     width: calc(100% - 80px);
@@ -100,6 +101,12 @@
   }
   .search-form__input:focus {
     width: calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-form {
+    padding: 0 20px 0 40px;
   }
 }
 

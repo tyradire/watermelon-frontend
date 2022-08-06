@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1af82532.css",
-    "main.js": "/static/js/main.5e6816c9.js",
+    "main.css": "/static/css/main.51b316c5.css",
+    "main.js": "/static/js/main.bc3100f7.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "static/media/watermelon-bg.jpg": "/static/media/watermelon-bg.a9716de2f794ed597217.jpg",
+    "static/media/watermelon-art.png": "/static/media/watermelon-art.560c1f4a7e533ff3ccde.png",
+    "static/media/watermelon-art-big.png": "/static/media/watermelon-art-big.9ac938511c00a7fab973.png",
     "static/media/inter-v11-latin_cyrillic-700.woff": "/static/media/inter-v11-latin_cyrillic-700.b29e9f07d570f0b28921.woff",
     "static/media/inter-v11-latin_cyrillic-800.woff": "/static/media/inter-v11-latin_cyrillic-800.15e7d76edc19c1007ccd.woff",
     "static/media/inter-v11-latin_cyrillic-600.woff": "/static/media/inter-v11-latin_cyrillic-600.c3a7be5554430477b184.woff",
@@ -16,28 +17,29 @@
     "static/media/inter-v11-latin_cyrillic-500.woff2": "/static/media/inter-v11-latin_cyrillic-500.1f6ed1cbe8940cb02696.woff2",
     "static/media/inter-v11-latin_cyrillic-300.woff2": "/static/media/inter-v11-latin_cyrillic-300.5bded7cb2c2a301d77f4.woff2",
     "static/media/inter-v11-latin_cyrillic-regular.woff2": "/static/media/inter-v11-latin_cyrillic-regular.3450f06ef9b75d403809.woff2",
+    "static/media/default-image.jpg": "/static/media/default-image.c0ca0c07d0eea93b5cd4.jpg",
+    "static/media/watermelon-logo.png": "/static/media/watermelon-logo.a4293fa1429a76c246c9.png",
     "static/media/zero.svg": "/static/media/zero.a6038ccc92c3f3589244696ba3295a63.svg",
-    "static/media/watermelon.svg": "/static/media/watermelon.30af81a5f6d329465fd4.svg",
-    "static/media/search.svg": "/static/media/search.b32184336af2a3158b2f.svg",
+    "static/media/watermelon-logo.svg": "/static/media/watermelon-logo.30af81a5f6d329465fd4.svg",
+    "static/media/search.svg": "/static/media/search.f3d88d763166aaab376c.svg",
     "static/media/github-icon.svg": "/static/media/github-icon.6f2fb80145b28e55dc6e.svg",
     "static/media/like.svg": "/static/media/like.9ae33b639d2c48102b786b6262c41d62.svg",
     "static/media/like-active.svg": "/static/media/like-active.44ab9d0080380ae5c5a5e5ec1e6f3005.svg",
     "static/media/logout-active.svg": "/static/media/logout-active.a173631267e3675d3af0.svg",
-    "static/media/logout.svg": "/static/media/logout.a6dc74725f7ee78c018b.svg",
     "static/media/minus.svg": "/static/media/minus.0637f36dadc62ebe3dd8.svg",
     "index.html": "/index.html",
     "static/media/unshow.svg": "/static/media/unshow.ca27f2d8d87105e9eb50.svg",
     "static/media/plus.svg": "/static/media/plus.37d8f5e7eac823a03e7a.svg",
     "static/media/burger.svg": "/static/media/burger.3ec4eefc4d827a3e178544f116546da3.svg",
+    "static/media/like-bookmark.svg": "/static/media/like-bookmark.82b094f27287f848c89dc08267e76199.svg",
     "static/media/show.svg": "/static/media/show.662390da3ad0439d1588.svg",
     "static/media/cross.svg": "/static/media/cross.c547c0a685817a991a17.svg",
-    "static/media/login.svg": "/static/media/login.85ac7c6e8570faed46bb.svg",
-    "main.1af82532.css.map": "/static/css/main.1af82532.css.map",
-    "main.5e6816c9.js.map": "/static/js/main.5e6816c9.js.map",
+    "main.51b316c5.css.map": "/static/css/main.51b316c5.css.map",
+    "main.bc3100f7.js.map": "/static/js/main.bc3100f7.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1af82532.css",
-    "static/js/main.5e6816c9.js"
+    "static/css/main.51b316c5.css",
+    "static/js/main.bc3100f7.js"
   ]
 }
