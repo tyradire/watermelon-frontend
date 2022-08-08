@@ -20,6 +20,7 @@ const AppRouter = observer(() => {
       product.setProducts(products);
       product.setFiltredProducts(products);
     })
+    .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {

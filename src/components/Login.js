@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
 import React, {useContext, useState} from 'react';
+import LoginUserError from './modals/LoginUserError';
 import { Context } from '../index';
 import '../pages/Auth/Auth.css';
-import LoginUserError from './modals/LoginUserError';
 
 const Login = observer(({ onSubmitLogin }) => {
 

@@ -22,8 +22,6 @@ const DeleteVendor = observer(({ show, onHide }) => {
     .catch(err => console.log(err))
   }
 
-  console.log(product.vendors)
-
   return (
     <Modal
     show={show}

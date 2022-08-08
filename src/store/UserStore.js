@@ -5,6 +5,7 @@ export default class UserStore {
     this._isAuth = false;
     this._isReg = false;
     this._isRegErr = false;
+    this._isLoginErr = false;
     this._user = {}
     this._role = ''
     this._email = 'reqaeaw@yasdf'
@@ -22,6 +23,10 @@ export default class UserStore {
 
   setIsRegErr(bool) {
     this._isRegErr = bool;
+  }
+
+  setIsLoginErr(bool) {
+    this._isLoginErr = bool;
   }
 
   setUser(user) {
@@ -59,6 +64,10 @@ export default class UserStore {
 
   get isRegErr() {
     return this._isRegErr;
+  }
+
+  get isLoginErr() {
+    return this._isLoginErr;
   }
 
   get user() {

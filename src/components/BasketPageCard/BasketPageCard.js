@@ -10,8 +10,9 @@ const BasketPageCard = observer(({ card, vendor, deleteProduct }) => {
   const { product } = useContext(Context);
 
   const clickMinus = () => {
-    deleteOnePiece(card.productId);
-    product.deleteProductPiece(card.productId);
+    deleteOnePiece(card.productId)
+    .then(res => product.deleteProductPiece(card.productId))
+    .catch(err => console.log(err));
   };
 
   const clickPlus = () => {
@@ -28,7 +29,6 @@ const BasketPageCard = observer(({ card, vendor, deleteProduct }) => {
     deleteProduct(card.productId);
   } 
 
-  // const total = Object.keys(product.basket).reduce((a, b) => a + product.basket[b].price * product.basket[b].quantity, 0);
   const total = card.price * card.quantity;
 
   return (

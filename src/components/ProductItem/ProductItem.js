@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import { Image } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { PRODUCT_ROUTE } from '../../utils/consts';
+import { addLike, deleteLike } from '../../utils/LikeApi';
+import { addToBasket, deleteOnePiece } from '../../utils/BasketApi';
+import ButtonWithCounter from '../ButtonWithCounter/ButtonWithCounter';
+import defaultImage from '../../assets/default-image.jpg';
 import likeBtn from '../../assets/like.svg';
 import likeBtnActive from '../../assets/like-active.svg';
-import { PRODUCT_ROUTE } from '../../utils/consts';
-import { addToBasket, deleteOnePiece } from '../../utils/BasketApi';
 import {Context} from "../../index";
 import { observer } from 'mobx-react-lite';
 import './ProductItem.css';
-import { addLike, deleteLike } from '../../utils/LikeApi';
-import ButtonWithCounter from '../ButtonWithCounter/ButtonWithCounter';
-import defaultImage from '../../assets/default-image.jpg';
 
 const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
 
@@ -43,14 +43,6 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
     .catch(err => console.log(err));
   };
 
-  // const deleteProductFull = () => {
-  //   deleteBasketProduct(card.id)
-  //   .then(() => {
-  //     delete product.basket[card.id];
-  //   })
-  //   .catch(err => console.log(err));
-  // }
-
   const deleteProduct = () => {
     deleteOnePiece(card.id)
     .then(() => {
@@ -65,7 +57,6 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
   return (
     <div className='product-item__card'>
       <Image className='product-item__image' src={card.img ? process.env.REACT_APP_PUBLIC_URL + card.img : defaultImage} onClick={() => navigate(PRODUCT_ROUTE + '/' + card.id)}/>
-      {/* <button className='product-item__delete-button' onClick={() => deleteProductFull()}>Х</button> */}
       <div className='product-item__info-wrapper'>
         <Link className='product-item__product-name' to={(PRODUCT_ROUTE + '/' + card.id)}>{card.name}</Link>
         <img className='product-item__like-btn'
@@ -75,7 +66,6 @@ const ProductItem = observer(({ card, vendor, vendorId, productId, alert }) => {
           }
           onClick={user.isAuth ? toggleLike : notAuth}/>
       </div>
-      {/* <div className='product-item__vendor-name'>{vendor}</div> */}
       <ButtonWithCounter className='product-item__button-component' productId={productId} addProduct={addProduct} deleteProduct={deleteProduct} card={card} alert={alert} notAuth={notAuth} />
     </div>
   );

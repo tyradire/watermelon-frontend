@@ -22,6 +22,7 @@ const Auth = observer(() => {
     })
     .catch((err) => {
       user.setIsRegErr(true);
+      console.log(err);
     })
   }
 
@@ -35,6 +36,7 @@ const Auth = observer(() => {
       navigate(SHOP_ROUTE);
     })
     .catch((err) => {
+      user.setIsLoginErr(true);
       console.log(err);
     })
   }

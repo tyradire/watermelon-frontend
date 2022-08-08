@@ -31,8 +31,6 @@ const CreateProduct = observer(({ show, onHide }) => {
       onHide()
     })
     .catch(err => console.log(err));
-    // getVendors().then(data => product.setVendors(data));
-    //createProduct({name, price, vendorId: product.selectedVendor.id}).then(data => onHide())
   }
 
   return (

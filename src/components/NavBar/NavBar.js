@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Context } from '../../index';
 import { SHOP_ROUTE, LOGIN_ROUTE, ADMIN_ROUTE, BASKET_ROUTE, FAVOURITES_ROUTE } from '../../utils/consts';
 import BasketContainer from '../BasketContainer/BasketContainer';
-import like from '../../assets/like-bookmark.svg';
 import './NavBar.css';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import SearchForm from '../SearchForm/SearchForm';
@@ -56,7 +55,7 @@ const NavBar = observer(() => {
       <div className='navbar-container'>
       <div className='navbar__nav-side'>
         <Link className="navbar__logo-link" to={SHOP_ROUTE}>
-          <img src={watermelonLogo} className="logo-link__pic" />
+          <img src={watermelonLogo} alt='логотип' className="logo-link__pic" />
           <p className='logo-link__name'>SHOP.RU</p>
         </Link>
         {user.isAuth ? 

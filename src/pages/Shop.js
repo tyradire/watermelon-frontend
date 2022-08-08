@@ -15,8 +15,6 @@ const Shop = observer(() => {
   const {product} = useContext(Context)
   const {user} = useContext(Context)
 
-  const [productSearch, setProductSearch] = useState('');
-
   const alert = () => {
     setShow(true)
     setTimeout(function () {
@@ -35,13 +33,6 @@ const Shop = observer(() => {
   for (let i = 0; i < product.products.length; i++) {
     newArray.push(product.products[i].name);
   }
-
-  let newSearch = newArray.filter(elem => elem.includes(productSearch));
-
-  
-
-  // console.log('array+', newArray)
-  // console.log(newSearch)
 
   return (
     <div>

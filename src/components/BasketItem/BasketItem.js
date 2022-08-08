@@ -15,8 +15,9 @@ const BasketItem = observer(({ card, deleteProduct }) => {
   } 
 
   const clickMinus = () => {
-    deleteOnePiece(card.productId);
-    product.deleteProductPiece(card.productId);
+    deleteOnePiece(card.productId)
+    .then(res => product.deleteProductPiece(card.productId))
+    .catch(err => console.log(err));
   }
 
   const clickPlus = () => {

@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Context } from '../../index';
 import './ButtonWithCounter.css';
 
-const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, card, notAuth }) => {
+const ButtonWithCounter = observer(({ productId, addProduct, deleteProduct, notAuth }) => {
 
   const {product} = useContext(Context);
   const {user} = useContext(Context);
