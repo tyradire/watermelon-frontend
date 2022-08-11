@@ -86,7 +86,7 @@
 
 @media screen and (max-width: 525px) {
   .button-counter {
-    width: 280px;
+    width: 96%;
     height: 26px;
     margin: 0 auto 21px;
   }
