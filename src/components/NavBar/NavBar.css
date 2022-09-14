@@ -252,10 +252,10 @@
   .navbar-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 20px 4px;
     height: 50px;
   }
   .navbar-main {
-    padding: 0;
+    padding: 4px;
   }
 }

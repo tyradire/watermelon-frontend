@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8321518b.css",
+    "main.css": "/static/css/main.980678df.css",
     "main.js": "/static/js/main.3be17429.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/watermelon-art.png": "/static/media/watermelon-art.560c1f4a7e533ff3ccde.png",
@@ -32,12 +32,12 @@
     "static/media/burger.svg": "/static/media/burger.3ec4eefc4d827a3e178544f116546da3.svg",
     "static/media/show.svg": "/static/media/show.662390da3ad0439d1588.svg",
     "static/media/cross.svg": "/static/media/cross.c547c0a685817a991a17.svg",
-    "main.8321518b.css.map": "/static/css/main.8321518b.css.map",
+    "main.980678df.css.map": "/static/css/main.980678df.css.map",
     "main.3be17429.js.map": "/static/js/main.3be17429.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8321518b.css",
+    "static/css/main.980678df.css",
     "static/js/main.3be17429.js"
   ]
 }
