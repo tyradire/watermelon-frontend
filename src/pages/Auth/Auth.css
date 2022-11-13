@@ -3,7 +3,7 @@
   height: 380px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 0 10px 28px  #cacaca;
+  box-shadow: 0 0 2px  #588a1f;
   margin-top: 100px;
   text-align: center;
   border-radius: 6px;
@@ -18,7 +18,7 @@
 }
 
 .auth__title {
-  color: #6cab7b;
+  color: #588a1f;
   font-size: 28px;
   line-height: 28px;
   font-weight: 600;
@@ -59,14 +59,14 @@
   line-height: 16px;
   font-weight: 400;
   color: #212529;
-  background-color: #fff;
+  background-color: #ffffff;
   background-clip: padding-box;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: none;
-  border-bottom: 1px solid #212529;
+  border-bottom: 1px solid #99ca74;
 }
 
 .auth__password-wrapper {
@@ -76,10 +76,10 @@
 .auth__show-wrapper {
   position: absolute;
   right: 0;
-  top: calc(50% - 24px);
-  height: 48px;
-  width: 50px;
-  background-color: #fff;
+  top: calc(50% - 8px);
+  height: 34px;
+  width: 40px;
+  background-color: #ffffff;
   cursor: pointer;
   background-image: url('../../assets/show.svg');
   background-repeat: no-repeat;
@@ -100,11 +100,8 @@
 }
 
 .auth__input:focus {
-  opacity: .5;
   color: #212529;
   outline: 0;
-  -webkit-box-shadow: 0px 10px 4px -10px #000000; 
-  box-shadow: 0px 10px 4px -10px #000000;
 }
 
 .auth__submit-container {
@@ -124,17 +121,16 @@
 
 .auth__button {
   font-size: 15px;
-  line-height: 15px;
+  line-height: .5;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   margin: 0;
   width: 100px;
   height: 40px;
-  background-color: #589377;
-  color: #fff;
+  background-color: #588a1f;
+  color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
   box-sizing: border-box;
@@ -143,13 +139,13 @@
 }
 
 .auth__button:hover {
-  opacity: .8;
+  color: #99ca74;
 }
 
 .auth__button:disabled {
   opacity: .5;
   color: #fff;
-  background-color: #818181;
+  background-color: #91bc5c;
 }
 
 .auth__button:hover:disabled {
@@ -168,7 +164,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ebebeb;
+  background-color: #99ca74;
   border-radius: 0 0 6px 6px;
 }
 
@@ -185,13 +181,11 @@
   line-height: 15px;
   font-weight: 600;
   margin: 0 0 0 10px;
-  color: #6cab7b;
-  opacity: 1;
+  color: #588a1f;
 }
 
 .auth__link:hover {
-  color: #6cab7b;
-  opacity: .8;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {

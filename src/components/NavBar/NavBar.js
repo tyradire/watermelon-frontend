@@ -56,7 +56,6 @@ const NavBar = observer(() => {
       <div className='navbar__nav-side'>
         <Link className="navbar__logo-link" to={SHOP_ROUTE}>
           <img src={watermelonLogo} alt='логотип' className="logo-link__pic" />
-          <p className='logo-link__name'>SHOP.RU</p>
         </Link>
         {user.isAuth ? 
             (
@@ -71,11 +70,13 @@ const NavBar = observer(() => {
             )
             : ''
         }
+        {
+          isShop ? <SearchForm /> : ''
+        }
       </div>
       {user.isAuth ?
         (!isMobile ? 
         <div className='navbar__user-side'>
-          
           <p className='navbar__email'>{user.email}</p>
           {notBasket ? <BasketContainer /> : ''}
           {user.role === 'ADMIN' ? <div variant={'outline-light'} onClick={() => navigate(ADMIN_ROUTE)} className="navbar__admin-button">
@@ -95,9 +96,7 @@ const NavBar = observer(() => {
           <p className='navbar__login-text'>Войти</p>
         </div>
       }
-      </div>{
-        isShop ? <SearchForm /> : ''
-      }
+      </div>
     </div>
   );
 })

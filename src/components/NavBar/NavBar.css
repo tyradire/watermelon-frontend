@@ -1,15 +1,13 @@
 .navbar-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 76px;
   margin: 0 auto;
   background-color: #99ca74;
   display: flex;
   justify-content: space-between;
-  padding: 0 140px;
+  padding: 0 40px;
   align-items: center;
-  border-radius: 0 0 25px 25px;
-  border-bottom: 4px solid #589377;
 }
 
 .navbar__logo-link {
@@ -90,16 +88,15 @@
 }
 
 .navbar__login {
-  color: #99ca74;
+  color: #ffffff;
   font-size: 15px;
-  line-height: 15px;
+  line-height: .5;
   font-weight: 500;
   cursor: pointer;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  background-color: #589377;
-  box-shadow: 0px 0px 10px #479e5c;
+  background-color: #588a1f;
 }
 
 .navbar__login-text {
@@ -109,8 +106,7 @@
 }
 
 .navbar__login:hover {
-  color: #fff;
-  box-shadow: 0px 0px 18px #479e5c;
+  color: #99ca74;
 }
 
 .navbar__admin-button {
@@ -152,9 +148,9 @@
 }
 
 .logo-link__pic {
-  width: 100px;
+  width: 54px;
   height: auto;
-  transform: rotate(-15deg);
+  transform: rotate(-10deg);
 }
 
 .logo-link__name {

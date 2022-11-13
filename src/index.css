@@ -1,11 +1,13 @@
 body {
-  /* background-image: url('./assets/watermelon-bg.jpg');
-  background-repeat: repeat; */
   background-color: #fff;
   min-height: 100vh;
-  background: url('../src/assets/watermelon-art.png') 5% 80% no-repeat, 
-              url('../src/assets/watermelon-art-big.png') 95% 40% no-repeat,
-              linear-gradient(0deg, rgba(213,86,86,0.5) 0%, rgba(232,255,186,0.5) 64%);
   margin: 0;
   padding: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset;
 }
