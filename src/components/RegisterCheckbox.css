@@ -45,11 +45,11 @@
 }
 
 .register-checkbox__input:checked + .register-checkbox__input {
-  background-color: #9acd32;
+  background-color: #588a1f;
 }
 
 .register-checkbox__input:focus + .register-checkbox__input {
-  box-shadow: 0 0 1px #9acd32;
+  box-shadow: 0 0 1px #588a1f;
 }
 
 .register-checkbox__input:checked + .register-checkbox__input:before {
@@ -67,14 +67,13 @@
 }
 
 .register-checkbox__description_admin {
-  color: #9acd32;
-  text-shadow: 0px 0px 10px #9acd32;
+  color: #588a1f;
 }
 
 .register-checkbox__tooltip {
   margin-left: 10px;
   text-decoration: underline;
-  color: #a0bd00;
+  color: #588a1f;
   display: block;
   border-radius: 50%;
   width: 16px;
@@ -106,7 +105,7 @@
   top: calc(50% - 38px);
   left: calc(50% - 150px);
   padding: 20px;
-  background-color: #9acd32;
+  background-color: #588a1f;
   box-shadow: 0px 0px 4px #c9c9c9;
   z-index: 2;
 }

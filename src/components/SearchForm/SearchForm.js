@@ -35,7 +35,7 @@ const SearchForm = observer(() => {
       <input 
         className="search-form__input" 
         type="text" 
-        placeholder="Поиск ..."
+        placeholder="Поиск..."
         value={productSearch}
         onChange={e=>setProductSearch(e.target.value)}
         onFocus={e=>setFocusInput(true)}
