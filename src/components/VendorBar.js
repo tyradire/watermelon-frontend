@@ -4,10 +4,15 @@ import { Context } from '../index';
 import { getVendors } from '../utils/VendorApi';
 import './VendorBar.css';
 import VendorBarItem from './VendorBarItem';
+import SearchForm from './SearchForm/SearchForm';
+import { SHOP_ROUTE } from '../utils/consts';
+import { useLocation } from 'react-router-dom';
 
 const VendorBar = observer(() => {
   
   const { product } = useContext(Context);
+  const location = useLocation()
+  const isShop = location.pathname === SHOP_ROUTE
 
   useEffect(() => {
     getVendors()
@@ -20,21 +25,27 @@ const VendorBar = observer(() => {
   }
 
   return (
-    <div className='vendor-bar' >
-      <div className={`vendor-bar__item ${product.selectedVendor.id ? '' : 'vendor-bar__selected'}`} onClick={() => product.setSelectedVendor({id: '', name: ''})}>
-        Все продавцы
-      </div>
-      {Object.keys(product.vendors).map(vendor => 
-        <VendorBarItem
-          onClick={() => selectVendorBar(vendor, product.vendors[vendor])
-          }
-          id={vendor}
-          key={vendor}
-          name={product.vendors[vendor]}
-          selectVendorBar={selectVendorBar}
-        />
+    <>
+      <div className='vendor-bar' >
+        <div className={`vendor-bar__item ${product.selectedVendor.id ? '' : 'vendor-bar__selected'}`} onClick={() => product.setSelectedVendor({id: '', name: ''})}>
+          Все продавцы
+        </div>
+        {Object.keys(product.vendors).map(vendor => 
+          <VendorBarItem
+            onClick={() => selectVendorBar(vendor, product.vendors[vendor])
+            }
+            id={vendor}
+            key={vendor}
+            name={product.vendors[vendor]}
+            selectVendorBar={selectVendorBar}
+          />
         )}
-    </div>
+      </div>
+      {
+        isShop ? <SearchForm /> : ''
+      }
+    </>
+    
   );
 
 });

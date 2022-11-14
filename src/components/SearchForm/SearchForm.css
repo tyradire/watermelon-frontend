@@ -1,9 +1,7 @@
 .search-form {
+  margin-top: 10px;
   display: flex;
-  margin-left: 40px;
   transition: .5s;
-  opacity: .6;
-  filter: grayscale(100%);
 }
 
 .search-form_focus {
@@ -19,14 +17,14 @@
   width: 28px;
   color: #fff;
   text-transform: uppercase;
-  background-color: #ff6666;
+  background-color: #ffb5b5;
   border: none;
   cursor: pointer;
   border-radius: 6px 0 0 6px;
 }
 
 .search-form__input {
-  width: 140px;
+  width: 218px;
   height: 34px;
   display: flex;
   justify-content: center;
@@ -61,7 +59,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
-  background-color: #588a1f;
+  background-color: #78a975;
   border-radius: 0 4px 4px 0;
 }
 

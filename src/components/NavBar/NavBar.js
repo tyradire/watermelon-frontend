@@ -67,9 +67,9 @@ const NavBar = observer(() => {
             )
             : ''
         }
-        {
+        {/* {
           isShop ? <SearchForm /> : ''
-        }
+        } */}
       </div>
       {user.isAuth ?
         (!isMobile ? 

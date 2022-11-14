@@ -10,7 +10,7 @@
 }
 
 .button-counter__quantity-wrapper {
-  height: 30px;
+  height: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,9 +27,9 @@
   border: none;
   background-color: rgba(173, 173, 173, 0.1);
   border-radius: 4px;
-  color: #9acd32;
+  color: #78a975;
   width: 36px;
-  height: 26px;
+  height: 36px;
   text-align: center;
   cursor: pointer;
   transition: .3s;
