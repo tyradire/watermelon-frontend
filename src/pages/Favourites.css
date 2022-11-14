@@ -1,11 +1,12 @@
 .favourites {
-  margin-top: 50px;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 50px;
   display: flex;
-  justify-content: center;
 }
 
 .favourites__wrapper {
-  width: 1290px;
+  width: 1280px;
   margin: 0;
   padding-left: 60px;
 }

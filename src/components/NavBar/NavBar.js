@@ -62,9 +62,6 @@ const NavBar = observer(() => {
               !isMobile ?
               <Link className='navbar__favourites-button' to={FAVOURITES_ROUTE}>
                 <p className={isFavourites ? 'favourites-button__text favourites-button__text_active' : 'favourites-button__text'}>Избранное</p>
-                <div className='favourites-button__icon'>
-                  <svg width="34px" height="34px" viewBox="0 0 22 22" fill="#ff6666" stroke="#0f5132" xmlns="http://www.w3.org/2000/svg"><path  d="M19 22V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v18l7-4.666L19 22zM8.006 8.056c0-.568.224-1.083.585-1.456.361-.372.86-.603 1.412-.603 0 0 .996-.003 1.997 1.029 1.001-1.032 1.997-1.029 1.997-1.029.552 0 1.051.23 1.412.603s.585.888.585 1.456-.224 1.084-.585 1.456L12 13.203 8.591 9.512a2.083 2.083 0 0 1-.585-1.456z"/></svg>
-                </div>
               </Link> :
               <BurgerButton signOut={signOut} />
             )

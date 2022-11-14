@@ -1,8 +1,10 @@
 body {
-  background-color: #fff;
+  background-color: #e3ffce;
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 input:-webkit-autofill,

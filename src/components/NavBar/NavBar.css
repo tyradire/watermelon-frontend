@@ -1,12 +1,14 @@
+.navbar-main {
+  background-color: #99ca74;
+}
+
 .navbar-container {
   position: relative;
-  width: 100%;
+  max-width: 1440px;
   height: 76px;
   margin: 0 auto;
-  background-color: #99ca74;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
   align-items: center;
 }
 
@@ -42,17 +44,14 @@
   font-weight: 500;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 2px 2px 1px #0f5132;
 }
 
 .favourites-button__text_active {
   color: #dc3557;
-  text-shadow: 2px 2px 1px #ffffff;
 }
 
 .navbar__favourites-button:hover .favourites-button__text {
-  color: #0f5132;
-  text-shadow: 2px 2px 1px #ffffff;
+  text-decoration: underline;
 }
 
 .navbar__auth-button {
@@ -136,10 +135,6 @@
   background-image: url('../../assets/logout-active.svg');
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.navbar-main {
-  position: relative;
 }
 
 .navbar__nav-side {

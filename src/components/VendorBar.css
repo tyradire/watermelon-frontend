@@ -1,8 +1,7 @@
 .vendor-bar {
-  padding: 5px;
+  padding: 6px;
   border-radius: 6px;
   background-color: rgba(153, 202, 116, 0.5);
-  border-bottom: 4px solid #589377;
 }
 
 .vendor-bar__all-vendors {
@@ -16,7 +15,7 @@
   font-weight: 500;
   padding: 8px;
   cursor: pointer;
-  margin: 2px;
+  margin: 4px;
   border-radius: 4px;
   background-color: rgb(15, 81, 50, .4);
   color: #fff;

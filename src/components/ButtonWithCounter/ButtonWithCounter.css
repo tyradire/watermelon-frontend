@@ -1,11 +1,11 @@
 .button-counter {
-  width: 200px;
-  height: 30px;
+  width: 214px;
+  height: 36px;
   cursor: pointer;
   box-sizing: border-box;
   text-align: center;
   background-color: #fff;
-  margin-bottom: 12px;
+  margin: 10px 0;
   border-radius: 4px;
 }
 
@@ -58,14 +58,13 @@
 
 .button-counter__add-btn {
   width: 100%;
-  height: 30px;
+  height: 36px;
   background-color: #99ca74;
   border-radius: 4px;
   color: #fff;
   font-size: 15px;
   line-height: 15px;
   font-weight: 600;
-  transition: .4s;
   display: flex;
   justify-content: center;
   align-items: center;
